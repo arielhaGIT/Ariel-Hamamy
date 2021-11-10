@@ -1,0 +1,16 @@
+*{
+    font-family:MyFont;
+}
+
+.input{
+    background-color:rgb(180, 235, 235);
+}
+input.input{
+    border: 1.5px solid rgb(73, 72, 72);
+}
+@font-face{
+    font-family: MyFont;
+    src: url(Roboto-MediumItalic.ttf);
+}
+
+/* שם\תיקייה\תיקייה /*
