@@ -11,10 +11,19 @@ body {
 #GridContainer #item1{
     display: grid; /* change display property (from black level to grid)*/
     grid-template-areas: 
-    'picture login login login'
-    'picture nav nav nav'
-    'picture search search search'
+    'picture login login login login login login login login login login login login login'
+    'picture nav nav nav nav nav nav nav nav nav nav nav nav nav'
+    'picture search search search search search search search search search search search search search'
     ;
+    
+}
+
+#GridContainer #item3{
+    display: grid; /* change display property (from black level to grid)*/
+    grid-template-areas: 
+    'info customerService map media'
+    ;
+    
 }
 
 #picture {
@@ -43,7 +52,7 @@ body {
 
 #item2{
     grid-area: mid;
-    height: 62vh;
+    /* height: 62vh; */
 }
 
 #item3{
@@ -51,10 +60,22 @@ body {
     height: 15vh;
 }
 
-.center{
-    text-align: center;
+.right{
+    text-align: right;
     font-family:MyFont;
     border: 1px solid black;
+}
+
+.picture{
+    width: 48px; height: 48px;
+}
+
+.down{
+    border: 1px solid black;
+}
+
+.center{
+    text-align: center;
 }
 
 @font-face{
