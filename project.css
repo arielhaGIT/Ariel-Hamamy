@@ -1,0 +1,78 @@
+body {
+    background-color:rgb(226, 180, 112);
+    
+    
+}
+ 
+#GridContainer{
+    height: 33vh;
+}
+
+#GridContainer #item1{
+    display: grid; /* change display property (from black level to grid)*/
+    grid-template-areas: 
+    'picture login login login'
+    'picture nav nav nav'
+    'picture search search search'
+    ;
+}
+
+#picture {
+    grid-area: picture;
+    width: 100%;
+    height: 19vh;
+}
+
+#login {
+    grid-area: login;
+    width: 100%;
+    height: 6vh;
+}
+
+#nav {
+    grid-area: nav;
+    width: 100%;
+    height: 6vh;
+}
+
+#search {
+    grid-area: search;
+    width: 100%;
+    height: 6vh;
+}
+
+#item2{
+    grid-area: mid;
+    height: 62vh;
+}
+
+#item3{
+    grid-area: mid;
+    height: 15vh;
+}
+
+.center{
+    text-align: center;
+    font-family:MyFont;
+    border: 1px solid black;
+}
+
+@font-face{
+    font-family: MyFont;
+    src: url(Roboto-BoldItalic.ttf);
+}
+
+@media only screen and (max-width:600px) {
+    body {
+        background-color: green;
+    }
+    #GridContainer {
+        grid-template-areas: 
+        'picture login'
+        'picture nav'
+        'picture search'
+        'mid'
+        'dowm'
+        ;
+    }
+}
