@@ -1,0 +1,85 @@
+body {
+    background-color:rgb(226, 180, 112);
+}
+
+#GridContainer {
+    display: grid; /* change display property (from black level to grid)*/
+    grid-template-areas: 
+    'header header header'
+    'left main main'
+    'left main main'
+    ;
+}
+
+#item1 {
+    grid-area: header;
+    width: 100%;
+    background-color:white;
+    height: 33vh;
+}
+
+#item2 {
+    grid-area: left;
+    width: 100%;
+    background-color:rgb(177, 163, 126);
+    height: 66vh;
+}
+
+#item3 {
+    grid-area: main;
+    width: 100%;
+    background-color:rgb(173, 109, 24);
+    height: 66vh;
+}
+
+.center{
+    text-align: center;
+    font-family:MyFont;
+}
+
+button{
+    height: 100%;
+    font-size: 40px;
+    background-color: rgb(30, 138, 209);
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: 5;
+}
+
+@font-face{
+    font-family: MyFont;
+    src: url(Roboto-BoldItalic.ttf);
+}
+
+@media only screen and (max-width:600px) {
+    body {
+        background-color: green;
+    }
+    #GridContainer {
+        grid-template-areas: 
+        'header'
+        'left'
+        'main'
+        ;
+    }
+}
+
+@keyframes blink{
+    0% {background-color: rgba(18, 38, 221, 0.281); border-radius: 0%;}
+    25% {background-color: rgb(24, 221, 211); border-radius: 50%} 
+    50% {background-color: rgb(34, 197, 56); border-radius: 100%}
+    75% {background-color: rgb(24, 221, 211); border-radius: 50%}
+    100% {background-color:rgba(18, 38, 221, 0.281);border-radius: 0%;}
+}
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About

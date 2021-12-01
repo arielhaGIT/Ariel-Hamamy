@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="SignInSignUp.css">
+    <script src= 'HomePage.JS'></script> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <script src= 'shop.js'></script> 
+</head>
+
+<body>
+        <!-- -----header-------- -->
+        <header id="Header"> 
+            <div class=picture_logo> 
+                <img class=picture_logo src="Pictures/logo.png" alt="logo img">    
+            </div>
+            <div id="login"> 
+                <label class=enter > Hello User </label>
+                <button class=border > Sign Out </button> 
+            </div>
+            <div id="nav" class="navbar"> 
+                    <!-- LOGO -->
+                    <div class="logo"></div>
+                    <!-- NAVIGATION MENU -->
+                    <ul class="nav-links">
+                        <!-- NAVIGATION MENUS -->
+                        <div class="menu">        
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/">About</a></li>
+                            <li><a href="/">Profile</a></li>
+                            <li><a href="/">Gallery</a></li>
+                            <li><a href="/">Store</a></li>
+                            <li><a href="/">Cart</a></li>
+                        </div>
+                    </ul>
+            </nav>
+        </header>
+
+        <!-- ------main----------- -->
+
+        <main id="search_eara">
+            <input class="search-box" type="text" id="search" onkeyup="myFunction()" placeholder="Search for names..">
+        
+            <div class = filter>
+                <b> Shop By Price: </b>
+                <button class="btn active" onclick="filterSelection('all')"> The whole store </button>
+                <button class="btn" onclick="filterSelection('low')">under 50₪</button>
+                <button class="btn" onclick="filterSelection('mid')"> 50₪-100₪</button>
+                <button class="btn" onclick="filterSelection('high')"> over 100₪</button>
+            </div>
+            <div class = filter>
+                <b> On Sale:</b> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                <button class="btn" onclick="filterSelection('sale')">sale</button>
+            </div>
+            <div class = filter>
+                <b> Colour: </b> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                <button id = "green" class="btn" onclick="filterSelection('green')">green</button>
+                <button id = "yellow" class="btn" onclick="filterSelection('yellow')">yellow</button>
+                <button id = "white" class="btn" onclick="filterSelection('white')">white</button>
+                <button id = "blue" class="btn" onclick="filterSelection('blue')">blue</button>
+                <button id = "black" class="btn" onclick="filterSelection('black')">black</button>
+            </div>
+        
+            
+            <ul id="Product_list">
+                <li>
+                    <div class="card filterDiv high sale black" v-for="post in filteredList">
+                        <img class=shopPicture src="Pictures/store1.PNG" alt=""> 
+                        <p><b>poike</b></p>
+                        price: <del>180₪</del> <ins>140₪</ins>
+                        <a href="#">add to cart</a>
+                    </div>
+                </li> 
+
+                <li>
+                    <div class="card filterDiv mid sale green" v-for="post in filteredList">
+                        <img class=shopPicture src="Pictures/store2.PNG" alt=""> 
+                        <p><b>box</b></p>
+                        price: <del>80₪</del> <ins>55₪</ins>
+                        <a href="#">add to cart</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="card filterDiv high green" v-for="post in filteredList">
+                        <img class=shopPicture src="Pictures/store3.PNG" alt=""> 
+                        <p><b>avocado</b></p>
+                        price: 190₪
+                        <a href="#">add to cart</a>
+                    </div>
+                </li> 
+                <li>
+                    <div class="card filterDiv mid yellow" v-for="post in filteredList">
+                        <img class=shopPicture src="Pictures/store4.PNG" alt=""> 
+                        <p><b>pineapple</b></p>
+                        price: 90₪
+                        <a href="#">add to cart</a>
+                    </div>
+                </li> 
+
+                <li>
+                    <div class="card filterDiv low sale black" v-for="post in filteredList">
+                        <img class=shopPicture src="Pictures/photo7.jpeg" alt=""> 
+                        <p><b>regular</b></p>
+                        price: <del>40₪</del> <ins>25₪</ins>
+                        <a href="#">add to cart</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="card filterDiv mid yellow" v-for="post in filteredList">
+                        <img class=shopPicture src="Pictures/base3.PNG" alt=""> 
+                        <p><b>pikachu</b></p>
+                        price: 95₪
+                        <a href="#">add to cart</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="card filterDiv mid sale blue" v-for="post in filteredList">
+                        <img class=shopPicture src="Pictures/photo3.jpeg" alt=""> 
+                        <p><b>blue pokemon</b></p>
+                        price: <del>90₪</del> <ins>60₪</ins>
+                        <a href="#">add to cart</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="card filterDiv mid white" v-for="post in filteredList">
+                        <img class=shopPicture src="Pictures/photo4.jpeg" alt=""> 
+                        <p><b>chinese food</b></p>
+                        price: 80₪
+                        <a href="#">add to cart</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="card filterDiv high yellow" v-for="post in filteredList">
+                        <img class=shopPicture src="Pictures/base2.png" alt=""> 
+                        <p><b>cheese</b></p>
+                        price: 270₪
+                        <a href="#">add to cart</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="card filterDiv mid" v-for="post in filteredList">
+                        <img class=shopPicture src="Pictures/photo6.jpeg" alt=""> 
+                        <p><b>wood style</b></p>
+                        price: 70₪
+                        <a href="#">add to cart</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="card filterDiv low blue" v-for="post in filteredList">
+                        <img class=shopPicture src="Pictures/base4.png" alt=""> 
+                        <p><b>Sponge bob </b></p>
+                        price: 45₪
+                        <a href="#">add to cart</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="card filterDiv low white" v-for="post in filteredList">
+                        <img class=shopPicture src="Pictures/Item1.PNG" alt=""> 
+                        <p><b>snail</b></p>
+                        price: 45₪
+                        <a href="#">add to cart</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="card filterDiv high sale white" v-for="post in filteredList">
+                        <img class=shopPicture src="Pictures/Item2.PNG" alt=""> 
+                        <p><b>alpaca</b></p>
+                        price: <del>240₪</del> <ins>160₪</ins>
+                        <a href="#">add to cart</a>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="card filterDiv high black white" v-for="post in filteredList">
+                        <img class=shopPicture src="Pictures/photo1.jpeg" alt=""> 
+                        <p><b>yin and yang</b></p>
+                        price: 130₪
+                        <a href="#">add to cart</a>
+                    </div>
+                </li> 
+
+                <li>
+                    <div class="card filterDiv mid sale black white yellow" v-for="post in filteredList">
+                        <img class=shopPicture src="Pictures/store5.PNG" alt=""> 
+                        <p><b>cat</b></p>
+                        price: <del>130</del> <ins>90</ins>
+                        <a href="#">add to cart</a>
+                    </div>
+                </li> 
+
+            </ul>    
+        </main>
+        
+            <!-- ------footer----------- -->
+            <footer id="footer">
+                <div class=footer id=media>
+                    <b> Media </b>
+                    <br> <br>
+                    <a href="https://www.instagram.com/succulents3d/?hl=en">
+                        <img class=picture src="Pictures/instanew.PNG" alt="">
+                    </a>
+                    <a href="https://www.facebook.com/groups/255920461595819/user/100000226827774/">
+                         <img class=picture src="Pictures/facebook.png" alt="">
+                    </a>
+                    <a href="https://twitter.com/Treesftf?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                    <img class=picture src="Pictures/twitter.png" alt="">
+                    </a>
+                </div>
+
+                <div class=footer id= "googleMap" style="width:100%;">
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwM32NKi7XSP0uVPI6pPp4YIEICkudsuE&callback=myMap">
+                    </script>
+                </div>
+
+                <div class=footer id="info">
+                    <b> Address </b> <br>
+                    <p> Yitzahk Rager St, Beer-Sheva </p><br> 
+                                    
+                    <b> Customer Service </b> <br> 
+                    
+                    <p>Phone: +972-54333333  </p>
+                    <p>Activity Time: 9am - 5pm</p>
+                    <button class="Refound"> Return & Refund Policy</button> 
+                </div>
+            </footer>
+</body>
+</html>
+

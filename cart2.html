@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="cart.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src= 'HomePage.JS'></script> 
+    <title>Cart</title>
+</head>
+
+<body>
+         <!-- -----header-------- -->
+         <header id="Header"> 
+            <div class=picture_logo> 
+                <img class=picture_logo src="Pictures/logo.png" alt="logo img">    
+            </div>
+            <div id="login"> 
+                <label class=enter > Hello User </label>
+
+                <a href="HomePage.html">
+                    <button class=border> Log Out</button> <br> <br>
+                </a>
+                                      
+            </div>
+            <nav id="nav" class="navbar"> 
+                    <!-- LOGO -->
+                    <div class="logo"></div>
+                    <!-- NAVIGATION MENU -->
+                    <ul class="nav-links">
+                        <!-- NAVIGATION MENUS -->
+                        <div class="menu">        
+                            <li><a href="HomePage.html">Home</a></li>
+                            <li><a href="about us.html">About</a></li>
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="Gallery.html">Gallery</a></li>
+                            <li><a href="shop.html">Store</a></li>
+                            <li><a href="cart.html">Cart</a></li>
+                        </div>
+                    </ul>
+            </nav>
+        </header>
+        
+        <!-- --------------Main-------------->
+        <main id="Main">
+            <div class="Cart">          
+                <div id="ItemTable">
+                    <div class=itemOrder> 
+                                        
+                        <div>
+                            <p id=MyItems class=items> My Items:</p>
+                        </div>
+
+                        <div id=SnailPic>
+                            <img class=ItemsPhoto src="Pictures/Item1.PNG" alt="">
+                        </div>
+                        <div id=SnailInfo>
+                            <label> Name: Snail</label>
+                            <label> amount: 1</label>
+                            <label> Price: 10$</label>
+                        </div>
+
+                        <div id=CatPic>
+                            <img class=ItemsPhoto src="Pictures/item2.PNG" alt="">
+                        </div>
+                        <div id=CatInfo>
+                            <label> Name: Cat</label>
+                            <label> amount: 1</label>
+                            <label> Price: 15$</label>
+                        </div>
+
+                        <div id=PlanterPic>
+                            <img class=ItemsPhoto src="Pictures/Item3.PNG" alt="">
+                        </div>
+                        <div id=PlanterInfo>
+                            <label> Name:Planter</label>
+                            <label> amount: 2</label>
+                            <label> Price: 25$</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="TotalPrice">
+                    <label> Cupon Code: --- </label> <br>
+                    <label> Total Price: --- </label> <br>
+                    <input type="submit" value="Proceed to checkout">
+                </div>
+            </div>
+        </main>
+        
+  <!-- ------footer----------- -->
+    <footer id="footer">
+            
+        <div class=footer id=media>
+            <b> Media </b>
+            <br> <br>
+            <a href="https://www.instagram.com/succulents3d/?hl=en">
+                <img class=picture src="Pictures/instanew.PNG" alt="">
+            </a>
+            <a href="https://www.facebook.com/groups/255920461595819/user/100000226827774/">
+                <img class=picture src="Pictures/facebook.png" alt="">
+            </a>
+            <a href="https://twitter.com/Treesftf?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                <img class=picture src="Pictures/twitter.png" alt="">
+            </a>
+        </div>
+
+        <div class=footer id= "googleMap" style="width:100%;";>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwM32NKi7XSP0uVPI6pPp4YIEICkudsuE&callback=myMap">
+            </script>
+        </div>
+
+        <div class=footer id="info">
+            <b> Address </b> <br>
+            <p> Yitzahk Rager St, Beer-Sheva </p><br> 
+                            
+            <b> Customer Service </b> <br> 
+            
+            <p>Phone: +972-54333333  </p>
+            <p>Activity Time: 9am - 5pm</p>
+            <button class="Refound"> Return & Refund Policy</button> 
+        </div>
+    </footer>  
+</body>
+</html>

@@ -1,0 +1,517 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+   }
+   
+body {
+    background-color:rgb(60, 148, 110); 
+    font-family: cursive;   
+}
+
+#Header{
+    grid-area: Header;
+    display: grid; /* change display property (from black level to grid)*/
+    grid-template-areas: 
+    'login login nav nav nav nav picture';
+    background-color: rgba(223, 236, 231, 0.815);
+    
+    height: 20h;  
+}
+
+
+
+
+/* if footer position grid */
+#footer{
+    grid-area: footer;
+    display: grid; /* change display property (from black level to grid)*/
+    grid-template-areas: 
+    /* 'info map map media' */
+    'media info googleMap googleMap googleMap googleMap googleMap googleMap'
+    ;
+    background-color: rgba(223, 236, 231, 0.815);
+    height: 35vh;
+    text-align: center;
+}
+
+/* --------------Header AND Footer---------------- */
+#media{
+    grid-area: media; 
+}
+
+#info{
+    grid-area:info;
+}
+
+#googleMap{
+    grid-area:googleMap;
+}
+
+/* logo */
+.picture_logo{
+    grid-area: picture; 
+    width: 100%;
+    height: 12vh;
+}
+main {
+    background-image: url('Pictures/white.jpg');
+}
+
+
+/* sing up + sign in */
+#login {
+    grid-area: login;
+    height: 6vh;
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    position: absolute; 
+}
+/* sign out style */
+.border {
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    /* text-align: center; */
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+    margin: 5px;
+  }
+  .border:hover {
+    background: #F6F9FE;
+    color: #174ea6;
+  }
+
+
+  /* Hello user */
+.enter {
+    align-items: center;
+    background-color: rgba(190, 190, 190, 0.959);
+    /* border-radius: 24px; */
+    /* box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0; */
+    color: #3c4043;
+    /* cursor: pointer; */
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 16px;
+    font-weight:500;
+    padding: 10px 20px;
+    text-align: center;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    }
+
+/* facebook insta twitter */
+.picture{
+    width: 48px; height: 48px;
+}
+
+/* class footer - every box */
+.footer{
+    border: 1px solid black;
+}
+
+
+
+      /* NAVBAR MENU */
+
+      
+      #nav{
+        margin-top: 10px;
+    }
+
+      
+      .nav-links a {
+        color: rgb(255, 255, 255);
+       }
+      .menu {
+        display: flex;
+        gap: 1em;
+        font-size: 24px;
+        
+       }
+       .menu li:hover {
+        background-color: rgb(151, 190, 166);
+        border-radius: 5px;
+        transition: 0.3s ease;
+       }
+       .menu li {
+        display:inline-block; /* used to wrap text */
+        position:relative;
+        float:left;
+        left:35%;
+        padding: 5px 14px;
+       }
+        
+        /* UTILITIES */
+        a {
+        text-decoration: none;
+       }
+       li {
+        list-style: none;
+       }
+    
+       
+/* ----------Refound Policy------------- */
+.Refound {
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 8px 2px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+    margin-top: 10px;
+  }
+  .Refound:hover {
+    background-color: rgba(240, 236, 236, 0.849);
+    color: #174ea6;
+  }
+
+
+
+
+/*------------------ sing_in + log_in  --------------*/
+@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+.login_center{
+    text-align: center; 
+}
+.login_img{
+    background-image: url('Pictures/photo2.jpeg');
+
+  /* Add the blur effect */
+  /* filter: blur(1px);
+  -webkit-filter: blur(1px); */
+
+  /* Full height */
+  height: 80vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login_text{
+    
+	width: auto;
+	height: auto;
+	z-index: 1;
+	opacity: 0.8;
+}
+
+.login_h{
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(40% - 255px);
+	z-index: 2;
+    background-color: rgb(221, 221, 221);
+    height: 250px;
+	width: 350px;
+  
+}
+
+.login_h div{
+    line-height: 270px;
+    vertical-align: middle;
+	float: left;
+	color: #387e0a;
+	font-family: 'Exo', sans-serif;
+	font-size: 35px;
+	font-weight: 200;
+   
+}
+
+.login_h div span{
+	color: #0d1a04 !important;
+ 
+}
+
+.login{
+    background-color: rgb(221, 221, 221);
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(45% );
+	height: 250px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+    
+    
+}
+
+.login input{
+	width: 250px;
+	height: 30px;
+    text-align: left;
+	border: 1px solid rgba(17, 17, 17, 0.6);
+	border-radius: 2px;
+	color: rgb(0, 0, 0);
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+    vertical-align: middle;
+    
+}
+
+.login input[type=Submit]{
+	width: 260px;
+	height: 35px;
+    text-align: center;
+	background: rgb(82, 82, 82);
+	border: 1px solid rgba(17, 17, 17, 0.6);
+	cursor: pointer;
+	border-radius: 2px;
+	color: #ffffff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+    
+}
+.login input[type=submit]:hover{
+    background-color: black;
+	opacity: 0.95;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!  gallery  !!!!!!!!!!!!!!!!!!!*/
+.gallery_center{
+    width: 100%;
+    background-color: white;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing:border-box;  
+}
+
+.gallery_picture{
+    height: 60vh;
+    width: 33.333333%;
+    margin: -2px;
+    
+}
+
+
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!  shop  !!!!!!!!!!!!!!!!!!!*/
+
+ /*!!!!!!!!!!!!!!!!!!!!!!  search  !!!!!!!!!!!!!!!!!!!*/
+#search_eara {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    height: 100vh;
+  }
+  .filter{
+      margin-left: 10vh;
+  }
+
+#search {
+    position: relative;
+    top: 8px;
+    margin-left: 10vh;
+    background-image: url('Images/img12.jpg'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-size: 1cm;
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 40%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+    font-family: cursive; 
+    border-radius: 25px;
+    border: 2px solid #92c498;
+  }
+  
+
+input {
+        padding: 4px 12px;
+        color: rgba(0,0,0,.70);
+        border: 1px solid rgba(0,0,0,.12);
+        transition: .15s all ease-in-out;
+        background: white;
+
+    }
+  
+    /*!!!!!!!!!!!!!!!!!!!!!!  product card  !!!!!!!!!!!!!!!!!!!*/
+.card {
+      transition: .15s all ease-in-out;
+      text-align: center;
+
+    /* line display */
+        display: flex;
+        display: inline-block;
+        position: relative;
+        float: left;
+    
+        width: 20%;
+        flex-wrap: wrap;
+        border: black solid 3px;
+        margin: 5%;
+        background-color: #c8e0d7;
+}
+
+.card img{
+    width: 100%;
+    height: 30vh;
+    
+}
+
+.card a{
+   margin-top: 90%; 
+}
+
+
+.card:hover {
+        transform: scale(1.05);
+        
+}
+
+#Product_list{
+    width: 100%;
+}
+  
+  #Product_list li a {
+    border: 1px solid rgb(5, 5, 5); /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #e0f3e2; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+  }
+  
+  #Product_list li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+  }
+
+     /*!!!!!!!!!!!!!!!!!!!!!!  filter button  !!!!!!!!!!!!!!!!!!!*/ 
+     
+     #green{
+         background: green;
+     }
+     #yellow{
+        background: yellow;
+    }
+    #blue{
+        background: blue;
+    }
+    #black{
+        background: black;
+        color: white;
+    }
+    #white{
+        background: white;
+    }
+
+    
+
+
+      /* Style the buttons */
+      .btn {
+        font-family: cursive; 
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        border-radius: 25px;
+        border: 2px solid #92c498;
+      }
+      
+      /* Add a light grey background on mouse-over */
+      .btn:hover {
+        background-color: #ddd;
+      }
+      
+      /* Add a dark background to the active button */
+      button.btn:focus {
+        background-color: #666;
+        color: white;
+      }
+
+      /* The "show" class is added to the filtered elements */
+    .hide {
+        /* display: block; */
+        display: none;
+    }
+      
+/* ---------------Shop---------------- */
+#search_eara{
+    height: 100%;
+    width: 100%;
+}
+
+  
+
+
+/* ----------------mobile----------------- */
+
+@media only screen and (max-width:600px) {
+
+    #GridContainer {
+        grid-template-areas: 
+        'picture login'
+        'picture nav'
+        'picture search'
+        'mid'
+        'dowm'
+        ;
+    }
+}

@@ -1,0 +1,241 @@
+body {
+    background-color:rgb(226, 180, 112);
+    
+    
+}
+ 
+#GridContainer{
+    height: 33vh;
+}
+
+#GridContainer #item1{
+    display: grid; /* change display property (from black level to grid)*/
+    grid-template-areas: 
+    'picture login login login login login login login login login login login login login'
+    'picture nav nav nav nav nav nav nav nav nav nav nav nav nav'
+    'picture search search search search search search search search search search search search search'
+    ;
+    
+}
+
+#GridContainer #item3{
+    display: grid; /* change display property (from black level to grid)*/
+    grid-template-areas: 
+    'info customerService map media'
+    ;
+    
+}
+
+#picture {
+    grid-area: picture;
+    width: 100%;
+    height: 19vh;
+}
+
+#login {
+    grid-area: login;
+    width: 100%;
+    height: 6vh;
+}
+
+#nav {
+    grid-area: nav;
+    width: 100%;
+    height: 6vh;
+}
+
+#search {
+    grid-area: search;
+    width: 100%;
+    height: 6vh;
+}
+
+#item2{
+    grid-area: mid;
+    /* height: 62vh; */
+}
+
+#item3{
+    grid-area: mid;
+    height: 15vh;
+}
+
+.right{
+    text-align: right;
+    font-family:MyFont;
+    border: 1px solid black;
+}
+
+.picture{
+    width: 48px; height: 48px;
+}
+
+.down{
+    border: 1px solid black;
+}
+
+.center{
+    text-align: center;
+}
+
+@font-face{
+    font-family: MyFont;
+    src: url(Roboto-BoldItalic.ttf);
+}
+
+@media only screen and (max-width:600px) {
+    body {
+        background-color: green;
+    }
+    #GridContainer {
+        grid-template-areas: 
+        'picture login'
+        'picture nav'
+        'picture search'
+        'mid'
+        'dowm'
+        ;
+    }
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!  sing_in + log_in  !!!!!!!!!!!!!!!!!!!*/
+@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+.login_center{
+    text-align: center; 
+}
+.login_img{
+    background-image: url('best-succulent-plants.jpg');
+
+  /* Add the blur effect */
+  /* filter: blur(1px);
+  -webkit-filter: blur(1px); */
+
+  /* Full height */
+  height: 70vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login_text{
+    position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	z-index: 1;
+	opacity: 0.8;
+}
+
+.login_h{
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(40% - 255px);
+	z-index: 2;
+    background-color: rgb(221, 221, 221);
+    height: 270px;
+	width: 350px;
+  
+}
+
+.login_h div{
+    line-height: 270px;
+    vertical-align: middle;
+	float: left;
+	color: #387e0a;
+	font-family: 'Exo', sans-serif;
+	font-size: 35px;
+	font-weight: 200;
+   
+}
+
+.login_h div span{
+	color: #0d1a04 !important;
+ 
+}
+
+.login{
+    background-color: rgb(221, 221, 221);
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(45% );
+	height: 250px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+    
+    
+}
+
+.login input{
+	width: 250px;
+	height: 30px;
+    text-align: left;
+	border: 1px solid rgba(17, 17, 17, 0.6);
+	border-radius: 2px;
+	color: rgb(255, 255, 255);
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+    vertical-align: middle;
+    
+}
+
+.login input[type=Submit]{
+	width: 260px;
+	height: 35px;
+    text-align: center;
+	background: rgb(82, 82, 82);
+	border: 1px solid rgba(17, 17, 17, 0.6);
+	cursor: pointer;
+	border-radius: 2px;
+	color: #ffffff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+    
+}
+.login input[type=submit]:hover{
+    background-color: black;
+	opacity: 0.95;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!  gallery  !!!!!!!!!!!!!!!!!!!*/
+.gallery_center{
+    width: 100%;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing:border-box;
+}
+.gallery_col{
+    float: left;
+    width: 32%;
+    padding: 2px;
+}
+.gallery_row1::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.gallery_row2::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.gallery_picture{
+    height: 50vh;
+    width: 60vh;
+}

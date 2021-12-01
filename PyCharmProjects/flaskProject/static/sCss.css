@@ -1,0 +1,14 @@
+:root{
+ --first: #dbd5d5;
+    --sec:gray
+}
+
+.body{
+    background-image: linear-gradient(var(--sec),var(--first));
+
+}
+
+*{
+    font-family: 'Montserrat', serif;
+}
+

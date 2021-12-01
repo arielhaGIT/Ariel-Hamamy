@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="SignInSignUp.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src= 'HomePage.JS'></script> 
+    <title>Sign In</title>
+</head>
+
+<body>
+
+        <!-- -----header-------- -->
+        <header id="Header"> 
+            <div class=picture_logo> 
+                <img class=picture_logo src="Pictures/logo.png" alt="logo img">    
+            </div>
+            <div id="login"> 
+                <button class=border> Sign Up</button> 
+                <button class=border> Sign In</button> <br> <br>
+            </div>
+            <nav id="nav" class="navbar"> 
+                    <!-- LOGO -->
+                    <div class="logo"></div>
+                    <!-- NAVIGATION MENU -->
+                    <ul class="nav-links">
+                        <!-- NAVIGATION MENUS -->
+                        <div class="menu">        
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/">About</a></li>
+                            <li><a href="/">Profile</a></li>
+                            <li><a href="/">Gallery</a></li>
+                            <li><a href="/">Store</a></li>
+                            <li><a href="/">Cart</a></li>
+                        </div>
+                    </ul>
+            </nav>
+        </header>
+        
+        <!-- -----------------Main------------- -->
+         <main id="Main" class="login_center">
+            <div class="login_img"></div>
+            <div class="login_text">
+                <div class="login_h">
+                    <div>SUCCULENTS<span>3D</span></div>
+                </div>
+                <br>
+                <div class="login">
+                   <form action="">
+                        <input type="text" placeholder="username" name="username"><br>
+                        <input type="password" placeholder=" password" name="password"><br>
+                        <input type="Submit" value="Enter">
+                    </form>
+                </div>
+           </div>
+        </main>
+          <!-- ------footer----------- -->
+          <footer id="footer">
+            
+            <div id=media>
+                <b> Media </b>
+                <br> <br>
+                <img class=picture src="Pictures/instanew.PNG" alt="">
+                <img class=picture src="Pictures/facebook.png" alt="">
+                <img class=picture src="Pictures/twitter.png" alt="">
+            </div>
+
+            <div class=footer id= "googleMap" style="width:100%;height:200px";>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwM32NKi7XSP0uVPI6pPp4YIEICkudsuE&callback=myMap">
+                </script>
+            </div>
+
+            <div class=footer id="info">
+                <b> Address </b> <br>
+                <p> Yitzahk Rager St, Beer-Sheva </p><br> 
+                                
+                <b> Customer Service </b> <br> 
+                
+                <p>Phone: +972-54333333  </p>
+                <p>Activity Time: 9am - 5pm</p>
+                <button class="Refound"> Return & Refund Policy</button> 
+            </div>
+        </footer>
+</body>
+</html>

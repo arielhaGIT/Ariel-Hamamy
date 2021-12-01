@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html  lang="">
+<head>
+  <title>Contact Me</title>
+     <Link rel="stylesheet" href="{{ url_for('static', filename='contact.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="body">
+
+<div class ="header">
+    <div class = "inner_header">
+        <div class = "logo_container">
+            <h1>
+                Dor Hen CV Site
+            </h1>
+        </div>
+    </div>
+</div>
+<hr>
+
+    <div class="contact-section">
+        <div class="contactForm">
+            <h2>Contact Me!</h2>
+            <form class="contact" action="" method="post">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id=name name="name" class="text-box" placeholder="Your Name" required><br><br>
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email" class="text-box" placeholder="Your Email" required ><br><br>
+                <label for="message">Your Message:</label><br>
+                <textarea name="message" id="message"  rows="7%" cols="50%" placeholder="Your Message" required></textarea><br>
+                <input type="submit" name="submit" class="send-btn" value="send"><br>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>

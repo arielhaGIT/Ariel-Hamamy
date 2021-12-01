@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+    <link rel ="stylesheet" href="{{ url_for('static', filename='cv.css')}}">
+    <title>Dor Hen CV</title>
+    <script src="{{ url_for('static', filename='CV.js') }}"></script>
+
+</head>
+<body class="body" onload="load()">
+
+<div class ="grid">
+    <div class = "header">
+        <h1 id = "head"></h1>
+        <h2>Industrial and Management Engineer</h2>
+    </div>
+
+    <div class = "first">
+        <div class ="pic">
+            <img src="{{ url_for('static', filename='pic.jpeg') }}" alt="MY PIC"></div>
+
+        <div class="para">
+            <h1>Hello Everyone!</h1>
+            <h2>A Bit About Me</h2>
+           <p>A 3rd year bachelor student, looking for a place to grow and succeed.<br>
+                I am hardworking, self-disciplined and highly motivated.<br>
+               In addition, I have the ability to learn and work as an independent and in a group.<br>
+               <a href = "{{ url_for('my_skill') }}">List of Skills</a>
+               <a href = "{{ url_for('assignment9') }}">Search for Recommendations</a>
+           </p>
+        </div>
+    </div>
+    <div class = "second">
+        <div class = "cv"><h1><a href="{{ url_for('static', filename='CV%20Dor%20Hen.pdf') }}" download>CV</a></h1></div>
+
+        <div class="proj"><h1><a href = "{{ url_for('colleagues') }}">Colleagues tell about Dor</a></h1></div>
+
+        <div class = "cont"><h1><a href="{{ url_for('Contacts') }}">Contact Me!</a></h1></div>
+
+    </div>
+
+         <ul class="navigation">
+            <b><li>052-5400-212</li></b>
+            <b><li>Gmail</li></b>
+             <b><li><a href="https://www.linkedin.com/in/dor-hen-6666631a6/">Linkedin</a></li></b>
+
+            <b><li>GitHub</li></b>
+        </ul>
+
+</div>
+
+</body>
+</html>

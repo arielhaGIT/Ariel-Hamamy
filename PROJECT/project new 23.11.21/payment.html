@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="payment.css">
+    <script src=payment.js> </script> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src= 'HomePage.JS'></script>
+    <title>Payment</title>
+</head>
+
+<body>
+            <!-- -----header-------- -->
+            <header id="Header"> 
+                <div class=picture_logo> 
+                    <img class=picture_logo src="Pictures/logo.png" alt="logo img">    
+                </div>
+                <div id="login"> 
+                    <label class=enter > Hello User </label>
+                    <button class=border > Sign Out </button> 
+                </div>
+                <nav id="nav"  class="navbar"> 
+                        <!-- LOGO -->
+                        <div class="logo"></div>
+                        <!-- NAVIGATION MENU -->
+                        <ul class="nav-links">
+                            <!-- NAVIGATION MENUS -->
+                            <div class="menu">        
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/">About</a></li>
+                                <li><a href="/">Profile</a></li>
+                                <li><a href="/">Gallery</a></li>
+                                <li><a href="/">Store</a></li>
+                                <li><a href="/">Cart</a></li>
+                            </div>
+                        </ul>
+                </nav>
+            </header>
+            
+
+        <!-- -------------main-------- -->
+         <main id="Main" class="payment_img">
+                <div id=payment>
+                    <form action=""  name="paymentForm" onsubmit="return paymentValidation()">
+                        <p> <label> Choose Delivery Method: </label> </p>
+                        <p> <label> ־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־ </label> </p>
+                        <input type="radio" id="Pick_Up" name="Delivery_Method" value="Pick_Up" >
+                        <label for="Pick_Up">Pick Up </label> <br>
+                        <input type="radio" id="current_Address" name="Delivery_Method" value="current_Address">
+                        <label for="current_Address">Delivery to current adress  </label><br>
+                        <br><br>
+                        <p> Credit Card Detais</p>
+                        <p> <label>־־־־־־־־־־־־־־־־־־־־־־־־־־</label> </p>
+                        <label for="Card_Number" class="padding"> Card Number</label>
+                        <input type="text" id="Card_Number" name="Card_Number" placeholder="0000 0000 0000 0000"> <br>
+                        <label> Expiry Date</label> &#160;
+                            <select>
+                                <option value="01">January</option>
+                                <option value="02">February </option>
+                                <option value="03">March</option>
+                                <option value="04">April</option>
+                                <option value="05">May</option>
+                                <option value="06">June</option>
+                                <option value="07">July</option>
+                                <option value="08">August</option>
+                                <option value="09">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                            <select>
+                                <option value="21"> 2021</option>
+                                <option value="22"> 2022</option>
+                                <option value="23"> 2023</option>
+                                <option value="24"> 2024</option>
+                                <option value="25"> 2025</option>
+                                <option value="26"> 2026</option>
+                            </select>
+                        <br>
+                        <label for="CVV"> CVV </label> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                        <input id="CVV" name="CVV" placeholder="000"> <br><br>
+                        <p> Total Price: --- </p><br>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+        </main> 
+        
+        <!-- ------footer----------- -->
+        <footer id="footer">
+                    
+            <div class=footer id=media>
+                <b> Media </b>
+                <br> <br>
+                <a href="https://www.instagram.com/succulents3d/?hl=en">
+                    <img class=picture src="Pictures/instanew.PNG" alt="">
+                </a>
+                <a href="https://www.facebook.com/groups/255920461595819/user/100000226827774/">
+                    <img class=picture src="Pictures/facebook.png" alt="">
+                </a>
+                <a href="https://twitter.com/Treesftf?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                    <img class=picture src="Pictures/twitter.png" alt="">
+                </a>
+            </div>
+
+            <div class=footer id= "googleMap" style="width:100%";>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwM32NKi7XSP0uVPI6pPp4YIEICkudsuE&callback=myMap">
+                </script>
+            </div>
+
+            <div class=footer id="info">
+                <b> Address </b> <br>
+                <p> Yitzahk Rager St, Beer-Sheva </p><br> 
+                                
+                <b> Customer Service </b> <br> 
+                
+                <p>Phone: +972-54333333  </p>
+                <p>Activity Time: 9am - 5pm</p>
+                <button class="Refound"> Return & Refund Policy</button> 
+            </div>
+        </footer>  
+</body>
+</html>

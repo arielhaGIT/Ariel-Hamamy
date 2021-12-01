@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+   }
+   
+body {
+    background-color:rgb(60, 148, 110); 
+    font-family: cursive;   
+}
+ 
+
+#Header{
+    grid-area: Header;
+    display: grid; /* change display property (from black level to grid)*/
+    grid-template-areas: 
+    'login login nav nav nav nav picture '
+    ;
+    background-color: rgba(223, 236, 231, 0.815);
+    height: 12vh;  
+}
+
+
+
+/* if footer position grid */
+#footer{
+    grid-area: footer;
+    display: grid; /* change display property (from black level to grid)*/
+    grid-template-areas: 
+    /* 'info map map media' */
+    'media info googleMap googleMap googleMap googleMap googleMap googleMap'
+    ;
+    background-color: rgba(223, 236, 231, 0.815);
+    height: 40vh;
+    text-align: center;
+}
+
+/* --------------Header AND Footer---------------- */
+#media{
+    grid-area: media; 
+}
+
+#info{
+    grid-area:info;
+}
+
+#googleMap{
+    grid-area:googleMap;
+}
+
+/* logo */
+.picture_logo{
+    grid-area: picture; 
+    width:100%;
+    height: 12vh;
+    align-items: right;
+}
+
+
+
+/* sing up + sign in */
+#login {
+    grid-area: login;
+    height: 6vh;
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    position: absolute; 
+}
+
+/* sing up + sign in style */
+.border {
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+  }
+  .border:hover {
+    background-color: rgba(240, 236, 236, 0.849);
+    color: #174ea6;
+  }
+
+/* facebook insta twitter */
+.picture{
+    width: 48px; height: 48px;
+}
+
+/* class footer - every box */
+.footer{
+    border: 1px solid black;
+}
+
+      /* NAVBAR MENU */
+      
+        #nav{
+            margin-top: 10px;
+        }
+
+      .nav-links a {
+        color: rgb(255, 255, 255);
+       }
+      .menu {
+        display: flex;
+        gap: 1em;
+        font-size: 24px;
+        
+       }
+       .menu li:hover {
+        background-color: rgb(151, 190, 166);
+        border-radius: 5px;
+        transition: 0.3s ease;
+       }
+       .menu li {
+        display:inline-block; /* used to wrap text */
+        position:relative;
+        float:left;
+        left:35%;
+        padding: 5px 14px;
+       }
+        
+        /* UTILITIES */
+        a {
+        text-decoration: none;
+       }
+       li {
+        list-style: none;
+       }
+
+
+/* ----------Refound Policy------------- */
+.Refound {
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 8px 2px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+    margin-top: 10px;
+  }
+  .Refound:hover {
+    background-color: rgba(240, 236, 236, 0.849);
+    color: #174ea6;
+  }
+
+
+/* ----------------Main----------------- */
+
+
+/* ---------Events-----------        */
+.Events{
+    text-align: center;
+    grid-area: ItemTable;
+    border: 1px solid rgba(17, 17, 17, 0.6);
+    border-radius: 2px;
+	color: rgb(0, 0, 0);
+    background-color: rgb(221, 221, 221);
+	/* padding: 10px; */
+	z-index: 2;
+    opacity: 0.8;
+	font-size: 16px;
+	font-weight: 400;
+	margin: 10px;
+    vertical-align: middle;
+    height: 35vh;
+    
+}
+
+
+.pictureGallery{
+    width: 180px; height: 180px ;
+    border: 1.5px solid black;    border-radius: 50%;
+    margin: 0.25%;
+}
+
+.pictureGallery:hover{
+    cursor: pointer;
+    border: yellowgreen;
+}
+
+#Main{
+    grid-area: Main;
+    text-align: center;
+}
+
+
+
+
+/*---------------------events -----------------------------> */
+.pictureEvents{
+    width: 80vh;
+     height: 50vh ;
+    border: 1.5px solid black;  
+}
+
+/* Caption text */
+
+
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 20vh;
+}
+
+.prev{
+    left: 20vh;
+  }
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+
+}
+
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+/*!--tryinggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg --> */
+
+
+
+
+
+/* ----------------mobile----------------- */
+
+@media only screen and (max-width:600px) {
+
+    #GridContainer {
+        grid-template-areas: 
+        'picture login'
+        'picture nav'
+        'picture search'
+        'mid'
+        'dowm'
+        ;
+    }
+}

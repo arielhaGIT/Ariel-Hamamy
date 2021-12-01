@@ -1,0 +1,334 @@
+*{
+    box-sizing: border-box;
+}
+.grid{
+    font-family: 'Montserrat', serif;
+   /*  grid-template-areas: 'none none none none none none'
+ 'img img img para para para';
+'cont cont cv cv proj proj';
+'foot foot foot foot foot foot'
+    'pic pic pic pic pic pic';*/
+}
+
+.header{
+    margin-left: 3%;
+    width: 100%;
+}
+.header h1{
+    font-size: 70px;
+    width: 60%;
+    float: left;
+}
+.header h2{
+    width: 40%;
+    float: right;
+    margin-top: 8%;
+}
+
+
+.first{
+
+}
+.pic{
+    width: 50%;
+    height : 40%
+}
+
+img{
+    border-radius: 50%;
+    height: 50%;
+    width: 50%;
+    margin-left: 40%;
+    margin-top: 5%;
+    float: left;
+border: 1px solid black;
+}
+
+
+.para{
+    grid-area: para;
+    width: 40%;
+    float: left;
+    padding: 20px;
+margin-left: 10%;
+    height: 20%;
+}
+.para h1{
+    font-size: 50px ;
+}
+
+.second{
+    margin-top: 1%;
+    float: left;
+    width: 100%;
+    height: 280px;
+}
+
+
+
+.cv{
+    grid-area: cv;
+    background-color: bisque;
+    width: 20%;
+    height: 65%;
+    border-radius: 50%;
+    float: left;
+    padding: 20px;
+    border: 1px solid black;
+    margin-left: 3%;
+}
+.cv h1{
+    font-size:50px;
+    margin-left: 32%;
+    margin-top: 20%;
+}
+.cv h1 a:link{
+    color: black;
+    text-decoration: none;
+}
+.cv h1 a:visited{
+    color: black;
+    text-decoration: none;
+}
+.cv h1 a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.proj{
+    grid-area: proj;
+    background-color: darkturquoise;
+    width: 20%;
+    height: 65%;
+    border-radius: 50%;
+    float:left;
+    margin-left: 17%;
+    padding: 20px;
+    border: 1px solid black;
+
+}
+.proj h1{
+    font-size:27px;
+    margin-left: 10%;
+    margin-top: 17%;
+}
+.proj h1 a:link{
+    color: black;
+    text-decoration: none;
+}
+.proj h1 a:visited{
+    color: black;
+    text-decoration: none;
+}
+.proj h1 a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+
+.cont{
+ grid-area: cont;
+    background-color: darkslateblue;
+    width: 20%;
+    height: 65%;
+    border-radius: 50%;
+    float: right;
+    padding: 20px;
+    border: 1px solid black;
+margin-right: 3%;
+}
+.cont h1{
+    margin-left: 5%;
+    margin-top: 25%;
+}
+.cont h1 a:link{
+    color: black;
+    text-decoration: none;
+}
+.cont h1 a:visited{
+    color: black;
+    text-decoration: none;
+}
+.cont h1 a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.navigation{
+    height: 80%;
+
+}
+.navigation col{
+    width: 50%;
+    float: left;
+}
+.navigation b{
+    height : 100%;
+    display: table;
+    float: left;
+    padding: 10px;
+    margin-left: 13%;
+}
+.navigation b li{
+    display: table-cell;
+    vertical-align: middle;
+    height : 100%;
+    color: black;
+    font-family: 'Montserrat', serif;
+    font-size: 16px;
+}
+.navigation b li a:link{
+    color: black;
+    text-decoration: none;
+}
+.navigation b li a:visited{
+    color: black;
+    text-decoration: none;
+}
+.navigation b li a:hover{
+    color: white;
+    text-decoration: none;
+}
+:root{
+ --first: #dbd5d5;
+    --sec:gray
+}
+
+.body{
+    background-image: linear-gradient(var(--sec),var(--first));
+
+}
+
+
+@media only screen and (max-width: 769px){
+ .header{
+    margin-left: 3%;
+    width: 60%;
+}
+
+    .header h1{
+    font-size: 40px;
+    width: 65%;
+    float: left;
+        margin-left: 10%;
+}
+
+    .header h2{
+     display: none;
+
+}
+   .pic{
+    width: 50%;
+    height : 10%;
+    float: right;
+}
+
+img{
+    border-radius: 50%;
+    height: 50%;
+    width: 50%;
+    float: left;
+border: 1px solid black;
+}
+
+.para{
+    grid-area: para;
+    width: 100%;
+    float: left;
+    padding: 20px;
+    font-size: 15px;
+
+
+}
+.para h1{
+    font-size: 20px ;
+}
+.para h2{
+    font-size: 15px;
+}
+.second{
+    margin-top: 1%;
+    float: left;
+    width: 100%;
+    height: 100px;
+}
+
+
+
+.cv{
+    grid-area: cv;
+    background-color: bisque;
+    width: 20%;
+    height: 65%;
+    border-radius: 50%;
+    float: left;
+    padding: 20px;
+    border: 1px solid black;
+    margin-left: 10%;
+}
+.cv h1{
+    font-size:20px;
+    margin-left: 20%;
+    margin-top: 1%;
+}
+
+.proj{
+    grid-area: proj;
+    background-color: darkturquoise;
+    width: 20%;
+    height: 65%;
+    border-radius: 50%;
+    float:left;
+    margin-left: 15%;
+    padding: 10px;
+    border: 1px solid black;
+
+}
+.proj h1{
+    font-size:12px;
+    margin-left: 2%;
+    margin-top: 16%;
+}
+
+.cont{
+ grid-area: cont;
+    background-color: dodgerblue;
+    width: 20%;
+    height: 65%;
+    border-radius: 50%;
+    float: right;
+    padding: 1px;
+    border: 1px solid black;
+margin-right: 3%;
+}
+.cont h1{
+    margin-left: 10%;
+    margin-top: 22%;
+    font-size: 12px;
+}
+.navigation a{
+    height : 100%;
+    display: table;
+    float: left;
+    padding: 1px;
+    margin-left: 8%;
+     margin-bottom: 10%;
+}
+.navigation a li{
+    display: table-cell;
+    vertical-align: middle;
+    height : 100%;
+    color: black;
+    font-family: 'Montserrat', serif;
+    font-size: 16px;
+
+}
+}
+
+
+
+
+
+

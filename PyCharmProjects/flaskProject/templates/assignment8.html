@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ass8</title>
+    <link rel ="stylesheet" href="{{ url_for('static', filename='cv.css')}}">
+
+</head>
+<body>
+{% if user.firstName %}
+    <h1>Welcome {{user.gender }}{{user.firstName}} to the skill list of Dor</h1>
+{% elif user.gender%}
+   <h1>Welcome {{user.gender }} Unknown to the skill list of Dor</h1>
+  {% else %}
+{% endif %}
+
+
+<h2>Programming Languages</h2>
+<ol>
+{%for i in range(0, len)%}
+    <li>{{prog[i]}} , {{level[i]}} </li>
+{%endfor%}
+{%for i in range(0, len)%}
+{%endfor%}
+</ol>
+
+{% block AS %}
+
+{% endblock %}
+</body>
+</html>
