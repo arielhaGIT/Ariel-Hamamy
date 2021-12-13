@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block tohen %}
+    {{ super() }}
+
+    <div id="GridContainer">
+        <div id="item1" class="center">
+            <button id="Button" onclick="MyName()"> Click Here </button>
+        </div>
+        <div id="item2">
+            <h3> Link to my Linkdin !</h3>
+            <a href="https://www.linkedin.com/in/ariel-hamamy-033a5a224/" id="linkedin"> My linkedin page</a>
+        </div>
+        <div id="item3" class="center">
+            <form id="form" action="">
+                <h1>Sign Up</h1>
+                <label for="FName">Full Name</label><br>
+                <input class="input" type="text" name="FName" id="" required><br><br>
+                <label for="Email">Email</label><br>
+                <input class="input" type="text" name="Email" id="" required><br><br>
+                <label for="phone" class="label"> telephone number </label><br>
+                <input class="input" name="phone" input type="tel" id="phone" pattern="[0][5][0-9]{8}" required placeholder="05x-xxxxxxx"><br>
+                <label for="pwd">Password</label><br>
+                <input class="input" type="password" id="pwd" name="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br><br>
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+{% endblock %}

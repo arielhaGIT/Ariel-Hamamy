@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e23d6866-4d5d-4ec7-8213-a5f6820baa69" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../arseni new/hw2/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../arseni new/hw2/static/CV.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../arseni new/hw2/static/CV.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../arseni new/hw2/templates/CV.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../arseni new/hw2/templates/assignment8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../arseni new/hw2/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../arseni new/hw2/templates/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../arseni new/hw2/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Arseni EX/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Arseni EX/.idea/Arseni EX.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Arseni EX/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Arseni EX/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Arseni EX/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Arseni EX/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Arseni EX/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/.idea/Class.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Class/.idea/Class.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/API.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/Class4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/G6.P2 (1).xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/Grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/Grid.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/Home_Page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/JSExample.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/JSex.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/PyCharmProjects.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-BlackItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-MediumItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-ThinItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/Stop.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/Stop.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/animation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/animation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/animation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/base lev" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/baseOLD.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/baseOLD.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/cart2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/cart2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/class4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/facebook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/insta.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/instanew.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/log_in.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/logo.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class/naama/twitter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PROJECT/web-project-g16" beforeDir="false" afterPath="$PROJECT_DIR$/../../PROJECT/web-project-g16" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="22E9De58TmnTp7incytRtS5NSjM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../arseni new/hw2" />
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.Page1.html (1)">
+    <configuration name="Footer.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/arseni class/class2/templates/Footer.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="Page1.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/arseni class/arseni/arseni class/class2/templates/Page1.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="Page1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/arseni class/class2/templates/Page1.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="arseni class" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/class2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/class2/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.Page1.html (1)" />
+        <item itemvalue="Python.app" />
+        <item itemvalue="JavaScript Debug.Page1.html" />
+        <item itemvalue="JavaScript Debug.Footer.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e23d6866-4d5d-4ec7-8213-a5f6820baa69" name="Changes" comment="" />
+      <created>1639391760649</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639391760649</updated>
+      <workItem from="1639391761923" duration="419000" />
+      <workItem from="1639395195201" duration="25000" />
+      <workItem from="1639395343071" duration="54000" />
+      <workItem from="1639395550347" duration="62000" />
+      <workItem from="1639395737406" duration="57000" />
+      <workItem from="1639395846958" duration="54000" />
+      <workItem from="1639395982377" duration="68000" />
+      <workItem from="1639396547197" duration="20000" />
+      <workItem from="1639397464321" duration="18000" />
+      <workItem from="1639397757663" duration="8000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
