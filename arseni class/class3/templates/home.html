@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block tohen %}
+    {{ super() }}
+
+    <h1> welcome back, {{ session.username |default ('guest', true)}}  </h1>
+
+{% endblock %}

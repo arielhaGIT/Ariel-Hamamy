@@ -26,5 +26,3 @@ def cart_func():  # put application's code here
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-

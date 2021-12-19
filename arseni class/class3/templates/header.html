@@ -2,11 +2,10 @@
     <a href="/"> Home </a> | <a href="/assignment8"> assignment8 </a>
     | <a href="/catalog"> catalog </a>
 
-
     {% if session.username %}
        | <a href="logout"> Log out</a>
     {% else %}
-        |   <a href="/assignment9"> assignment9 </a>
+        |   <a href="/login"> login </a>
     {% endif %}
-    <h2> welcome back, {{ session.username |default ('guest', true)}}  </h2>
 </header>
+

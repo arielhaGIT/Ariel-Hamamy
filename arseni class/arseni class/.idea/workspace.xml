@@ -2,63 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e23d6866-4d5d-4ec7-8213-a5f6820baa69" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../arseni new/hw2/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../arseni new/hw2/static/CV.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../arseni new/hw2/static/CV.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../arseni new/hw2/templates/CV.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../arseni new/hw2/templates/assignment8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../arseni new/hw2/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../arseni new/hw2/templates/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../arseni new/hw2/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Arseni EX/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Arseni EX/.idea/Arseni EX.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Arseni EX/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Arseni EX/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Arseni EX/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Arseni EX/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Arseni EX/app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/.idea/Class.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Class/.idea/Class.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/API.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/Class4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/G6.P2 (1).xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/Grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/Grid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/Home_Page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/JSExample.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/JSex.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/PyCharmProjects.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-Black.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-BlackItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-LightItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-MediumItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-Thin.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/Roboto-ThinItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/Stop.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/Stop.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/animation.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/animation.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/animation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/base lev" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/baseOLD.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/baseOLD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/cart2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/cart2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/class4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/facebook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/insta.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/instanew.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/log_in.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/logo.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class/naama/twitter.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PROJECT/web-project-g16" beforeDir="false" afterPath="$PROJECT_DIR$/../../PROJECT/web-project-g16" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../arseni new/hw1/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../arseni new/hw1/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +24,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../arseni new/hw2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="JavaScript Debug.Page1.html (1)">
     <configuration name="Footer.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/arseni class/class2/templates/Footer.html" useBuiltInWebServerPort="true">
@@ -140,6 +85,7 @@
       <workItem from="1639396547197" duration="20000" />
       <workItem from="1639397464321" duration="18000" />
       <workItem from="1639397757663" duration="8000" />
+      <workItem from="1639570458308" duration="78000" />
     </task>
     <servers />
   </component>
