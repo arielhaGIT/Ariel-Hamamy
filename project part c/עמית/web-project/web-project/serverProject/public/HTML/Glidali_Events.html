@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glidali</title>
+    <link rel="stylesheet" href="../css/Style_Glidali_Events.css">
+    <link rel="stylesheet" href="../css/lightbox.min.css">
+    <script>
+        function lettersOnly(input) {
+            var regex = /[^a-z]/gi;
+            input.value = input.value.replace(regex, "");
+        }
+    </script>
+    <script>
+        function numbersOnly(input) {
+            var regex = /[^0-9]/g;
+            input.value = input.value.replace(regex, "");
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="menu-bar">
+        <ul>
+            <li><img class="top_nav_btn" id="openbtn_img" src="../image/menubar.png"><a href="#">Menu Bar</a>
+                <div class="sum-menu-1">
+                    <ul>
+                        <li><a href="../HTML/Our_Products.html">Glidali Gallery Products</a></li>
+                        <li><a href="../HTML/Do_It_By_Yourself.html">Do It By Yourself</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="../HTML/Home_Page.html"><img class="top_nav_btn" id="openbtn_img" src="../image/ice_cream2.png"></a><a href="../HTML/Home_Page.html"><i
+                        class="ice_cream2"></i>Home</a></li>
+            <li>
+                <a href="../HTML/Glidali_Story.html"><img class="top_nav_btn" id="Glidali_Story_img" class="Glidali_Story_img" src="../image/about us.png"></a><a href="../HTML/Glidali_Story.html">Our Story</a></li>
+            <li>
+                <a href="../HTML/Log_In_Page.html"><img class="top_nav_btn" id="newMembertn_img" class="newMembertn_img" src="../image/user2.png"></a><a href="../HTML/Log_In_Page.html">Log In</a></li>
+            <li>
+                <a href="../HTML/Contact_Us.html"><img class="top_nav_btn" id="phonebtn_img" src="../image/phone.png"></a><a href="../HTML/Contact_Us.html">Contact us</a></li>
+            <li>
+                <a href="../HTML/Shopping_Cart.html"><img class="top_nav_btn" id="shoppingCartbtn_img" src="../image/shopcart.png"></a><a href="../HTML/Shopping_Cart.html">My Cart</a></li>
+            <li>
+                <a href="../HTML/Our Menu.html"><img class="top_nav_btn" id="icecreamBtn_img" src="../image/ice_cream.png"></a><a href="../HTML/Our Menu.html">Our Products</a></li>
+            <li>
+                <a href="../HTML/Glidali_Events.html"><img class="top_nav_btn" id="icecreamBtn_img" src="../image/glidali.gif"></a><a href="../HTML/Glidali_Events.html">Our Events</a>
+        </ul>
+    </div>
+    <div class="events">
+        <br><br><br><br>
+        <center>
+            <h1>Our Events</h1>
+        </center>
+    </div>
+    <div class="introduction">
+        <h3>Business events- Company events, conferences, Happy hours,<br>product launch events, customer events and more.
+            <br> Private events- Weddings, bachelor parties, birthdays,<br> bar/bat mitzvahs, anniversaries, family reunions or any other event.<br> For more details - 0544556677</h3>
+    </div>
+    <div class="Info">
+        <center>
+            <form class="contact" action="" method="post">
+                <input type="text" name="name" class="text-box" placeholder="Your Name" required onkeyup="lettersOnly(this)">
+                <input type="email" name="email" class="text-box" placeholder="Your Email" required>
+                <input type="text" name="type" class="text-box" placeholder="Event type" required onkeyup="lettersOnly(this)">
+                <input type="text" name="Location" class="text-box" placeholder="Event Location" required onkeyup="lettersOnly(this)">
+                <input type="number" name="number" class="text-box" placeholder="Number Of Participants" required onkeyup="numbersOnly(this)">
+                <input type="date" name="date" class="text-box" placeholder="Event Date" required>
+                <textarea type="details" rows="5" class="textarea" placeholder="More details" required></textarea>
+                <input type="submit" name="sumbit" class="send-bth" value="Send" onclick="alert ('Thank you for choosing to do the event at Gildali')">
+        </center>
+        </form>
+    </div>
+</body>
+
+</html>

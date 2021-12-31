@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Profile' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('profile.static', filename='css/profile.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+    <main id="Main">
+            <div class="ProfilePic"><br>
+                <img class=pictureGallery src="{{ url_for('profile.static', filename='media/profile.jpeg') }}" alt="" >
+            </div>
+            <div class="details">
+                <ul><b> This is me</b>
+                    <li>User Name: Nachum Takum</li>
+                    <li>Email: nachumtak@gmail.com</li>
+                    <li>Date of birth: 10.10.1910</li>
+                    <li>
+                         <a href='/UpdateDetails'>
+                            <button class = "border" onclick="filterupdate('phone')"> Edit phone </button>
+                         </a>
+                    </li>
+                    <li>
+                         <a href='/UpdateDetails'>
+                            <button class = "border"> Edit password </button>
+                         </a>
+                    </li> <br> <br><br>
+                    <li>
+                         <a href='/deleteUser'>
+                            <button class = "border " onclick=""> delete account </button>
+                         </a>
+                    </li>
+
+                </ul>
+            </div>
+                 <div class="address">
+                    <ul><b> Address details</b>
+                        <li>Address: 825 Hicksville Rd, Queens, NY 11691</li>
+                        <li>Telephone: (234) 235-5678 </li>
+                         <li> <button class = "border"> Edit | Change Address </button> </li>
+                    </ul>
+                 </div>
+                 <div class="orders">
+                     <ul><b> my last orders</b>
+                         <div class="ordersExample">
+
+                             <table class="styled-table">
+                                <thead>
+                                    <tr>
+                                        <th>Order no.</th>
+                                        <th>Date</th>
+                                        <th>Address</th>
+                                        <th>Payment</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>29.11.2021</td>
+                                        <td>825 Hicksville Rd, Queens, NY 11691</td>
+                                        <td>$112</td>
+                                        <td>Shipped</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>28.8.2021</td>
+                                        <td>825 Hicksville Rd, Queens, NY 11691</td>
+                                        <td>$42</td>
+                                        <td>Refunded</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>10.8.2021</td>
+                                        <td>825 Hicksville Rd, Queens, NY 11691</td>
+                                        <td>$56</td>
+                                        <td>Shipped</td>
+                                    </tr>
+                                    <!-- ... -->
+                                </tbody>
+                            </table>
+                         </div>
+                    </ul>
+                 </div>
+            <br>
+    </main>
+
+{% endblock %}
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('profile.static', filename='js/profile.js') }}"></script>
+{% endblock %}

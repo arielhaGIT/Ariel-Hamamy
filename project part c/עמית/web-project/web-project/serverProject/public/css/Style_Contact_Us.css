@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../background/Our_Products.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+
+
+/*---------Start-menuBar---------*/
+
+.menu-bar {
+    background: black;
+    text-align: center;
+    height: 10vh;
+    font-size: 1vw;
+}
+
+.menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: whitesmoke;
+}
+
+.menu-bar ul li {
+    width: 10vw;
+    margin: 0px;
+    padding: 1vh;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.menu-bar ul li:hover {
+    background: palevioletred;
+    border-radius: 3px;
+}
+
+.top_nav_btn {
+    object-fit: contain;
+    height: 5vh;
+    width: 100%;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+
+.sum-menu-1 {
+    display: none;
+}
+
+.menu-bar ul li:hover .sum-menu-1 {
+    display: block;
+    position: absolute;
+    background: black;
+    margin-top: 1vh;
+    margin-left: -1vh;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul {
+    display: block;
+    margin: 2vh;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul li {
+    width: 8vw;
+    padding: 1vh;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul li:last-child {
+    border-bottom: none;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul li a:hover {
+    color: palevioletred;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-bar {
+        font-size: 2vw;
+    }
+    .h1 {
+        font-size: 2vw;
+    }
+}
+
+
+/*---------End-menuBar---------*/
+
+.contact-section {
+    float: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+}
+
+.contact-info {
+    float: center;
+    color: black;
+    max-width: 500px;
+    line-height: 65px;
+    padding-left: 50px;
+    font-size: 18px;
+}
+
+.contact-info i {
+    float: center;
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.contact-form {
+    float: center;
+    max-width: 700px;
+    margin-left: 5%;
+    color: palevioletred;
+}
+
+.contact-info,
+.contact-form {
+    float: center;
+    flex: i;
+}
+
+.contact-form h1 {
+    color: rgb(236, 42, 107);
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.contact-form .text-box {
+    float: center;
+    background: rgb(252, 238, 238);
+    color: black;
+    border: none;
+    width: calc(50% - 10px);
+    height: 50px;
+    padding: 12px;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.contact-form .text-box:first-child {
+    margin-right: 15px;
+}
+
+.contact-form textarea {
+    background: rgb(252, 238, 238);
+    color: black;
+    border: none;
+    float: center;
+    width: 100%;
+    padding: 12px;
+    font-size: 20px;
+    min-height: 200px;
+    max-height: 400px;
+    resize: vertical;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-right: 85%;
+    font-family: sans-serif;
+    opacity: 0.9;
+}
+
+.contact-form .send-bth {
+    float: center;
+    background: palevioletred;
+    color: black;
+    border: none;
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(236, 42, 107);
+    margin: 30px 0 50px;
+    font-family: Copperplate, Papyrus, fantasy;
+    text-shadow: 5px 5px 10px white;
+    font-size: 350%;
+}
+
+.contact-form .send-bth:hover {
+    background: palevioletred;
+    color: white;
+    font-family: sans-serif;
+}
+
+@media screen and (max-width: 950px) {
+    .contact-section {
+        flex-direction: column;
+    }
+    .contact-info,
+    .contact-form {
+        margin: 30px 50px;
+    }
+    .contact-form h1 {
+        font-size: 30px;
+    }
+    .contact-form .text-box {
+        width: 100%;
+    }
+    /*css for alert message*/
+    .alert-success {
+        z-index: 1;
+        background: palevioletred;
+        font-size: 18px;
+        padding: 20px 40px;
+        min-width: 420px;
+        position: fixed;
+        right: 0;
+        top: 10px;
+        border-left: black;
+        border-radius: 4px;
+    }
+    .alert-error {
+        z-index: 1;
+        background: palevioletred;
+        font-size: 18px;
+        padding: 20px 40px;
+        min-width: 420px;
+        position: fixed;
+        right: 0;
+        top: 10px;
+        border-left: black;
+        border-radius: 4px;
+    }
+}

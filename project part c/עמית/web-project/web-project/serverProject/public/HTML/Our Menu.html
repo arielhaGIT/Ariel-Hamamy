@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glidali</title>
+    <link rel="stylesheet" href="../css/Style_Our_Menu.css">
+    <script src="../js/functions.js"></script>
+</head>
+
+<body onload=initiateProducts()>
+    <div class="menu-bar">
+        <ul>
+            <li><img class="top_nav_btn" id="openbtn_img" src="../image/menubar.png"><a href="#">Menu Bar</a>
+                <div class="sum-menu-1">
+                    <ul>
+                        <li><a href="../HTML/Our_Products.html">Glidali Gallery Products</a></li>
+                        <li><a href="../HTML/Do_It_By_Yourself.html">Do It By Yourself</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="../HTML/Home_Page.html"><img class="top_nav_btn" id="openbtn_img" src="../image/ice_cream2.png"></a><a href="../HTML/Home_Page.html"><i
+                        class="ice_cream2"></i>Home</a>
+            </li>
+            <li>
+                <a href="../HTML/Glidali_Story.html"><img class="top_nav_btn" id="Glidali_Story_img" class="Glidali_Story_img" src="../image/about us.png"></a><a href="../HTML/Glidali_Story.html">Our Story</a>
+            </li>
+            <li>
+                <a href="../HTML/Log_In_Page.html"><img class="top_nav_btn" id="newMembertn_img" class="newMembertn_img" src="../image/user2.png"></a><a href="../HTML/Log_In_Page.html">Log In</a>
+            </li>
+            <li>
+                <a href="../HTML/Contact_Us.html"><img class="top_nav_btn" id="phonebtn_img" src="../image/phone.png"></a><a href="../HTML/Contact_Us.html">Contact us</a>
+            </li>
+            <li>
+                <a href="../HTML/Shopping_Cart.html"><img class="top_nav_btn" id="shoppingCartbtn_img" src="../image/shopcart.png"></a><a href="../HTML/Shopping_Cart.html">My Cart</a>
+            </li>
+            <li>
+                <a href="../HTML/Our Menu.html"><img class="top_nav_btn" id="icecreamBtn_img" src="../image/ice_cream.png"></a><a href="../HTML/Our Menu.html">Our Products</a>
+            </li>
+            <li>
+                <a href="../HTML/Glidali_Events.html"><img class="top_nav_btn" id="icecreamBtn_img" src="../image/glidali.gif"></a><a href="../HTML/Glidali_Events.html">Our Events</a>
+        </ul>
+    </div>
+
+    <h1 class="menuTitle"><span>ICE CREAMS</span></h1>
+    <div class="row">
+        </form>
+        <div class="column">
+            <p class="vanillaText" id="vanillaText">Vanila</p>
+            <img class="ShopPic" src="../image/Vanilla.jpeg" alt="Vanila">
+            <p class="vanillaText2" id="vanillaText2">Rich ice-cream with vanila touches</p>
+            <div class="btn-group">
+                <span class="icecreamPrices1kg" id="vanillaPrice1">1 kg: 20$&nbsp;&nbsp;&nbsp;</span>
+                <span><input type="button" value="-" class="minusbtn" data-field="quantity" button
+                        onclick="decreaseValue('Vanila','quantity1','totalPriceText',20,'-',1)">
+                    <input id="quantity1" type="number" step="1" max="" value="0" name="quantity"
+                        class="quantity-field">
+                    <input type="button" value="+" class="plusbtn" data-field="quantity" button
+                        onclick="increaseValue('Vanila','quantity1','totalPriceText',20,'+',1)">
+                    <p class="icecreamPrices05kg" id="vanillaprice2">0.5 kg: 12$
+                        <input type="button" value="-" class="minusbtn" data-field="quantity" button
+                            onclick="decreaseValue('Vanila','quantity2','totalPriceText',12,'-',0)">
+                        <input type="number" step="1" max="" value="0" name="quantity" id="quantity2"
+                            class="quantity-field">
+                        <input type="button" value="+" class="plusbtn" data-field="quantity" button
+                            onclick="increaseValue('Vanila','quantity2','totalPriceText',12,'+',0)">
+            </div>
+        </div>
+
+        <div class="column">
+            <p class="chocolateText" id="chocolateText">Chocolate</p>
+            <img class="ShopPic" src="../image/chocolate.jpeg" alt="Chocolate">
+            <p class="chocolateText2" id="chocolateText2">Belgian chocolate ice-cream</p>
+            <div class="btn-group">
+                <span class="icecreamPrices1kg" id="chocolatePrice1">1 kg: 20$&nbsp;&nbsp;&nbsp;</span>
+                <input type="button" value="-" class="minusbtn" data-field="quantity" button onclick="decreaseValue('Chocolate','quantity3','totalPriceText',20,'-',1)">
+                <input type="number" step="1" max="" value="0" name="quantity" min="0" id="quantity3" class="quantity-field">
+                <input type="button" value="+" class="plusbtn" data-field="quantity" button onclick="increaseValue('Chocolate','quantity3','totalPriceText',20,'+',1)">
+                <p class="icecreamPrices05kg" id="chocolatePrice2">0.5 kg: 12$
+                    <input type="button" value="-" class="minusbtn" data-field="quantity" button onclick="decreaseValue('Chocolate','quantity4','totalPriceText',12,'-',0)">
+                    <input type="number" step="1" max="" value="0" name="quantity" min="0" id="quantity4" class="quantity-field">
+                    <input type="button" value="+" class="plusbtn" data-field="quantity" button onclick="increaseValue('Chocolate','quantity4','totalPriceText',12,'+',0)">
+            </div>
+        </div>
+        <div class="column">
+            <p class="pistachioText" id="pistachioText">Pistachio</p>
+            <img class="ShopPic" src="../image/pistachio.jpeg" alt="Pistachio">
+            <p class="pistachioText2" id="pistachioText2">Our favorite pistachio ice-cream</p>
+            <div class="btn-group">
+                <span class="icecreamPrices1kg" id="pistachioPrice1">1 kg: 24$&nbsp;&nbsp;&nbsp;</span>
+                <input type="button" value="-" class="minusbtn" data-field="quantity" button onclick="decreaseValue('Pistachio','quantity5','totalPriceText',24,'-',1)">
+                <input type="number" step="1" max="" value="0" name="quantity" min="0" id="quantity5" class="quantity-field">
+                <input type="button" value="+" class="plusbtn" data-field="quantity" button onclick="increaseValue('Pistachio','quantity5','totalPriceText',24,'+',1)">
+                <p class="icecreamPrices05kg" id="pistachioPrice2">0.5 kg: 14$
+                    <input type="button" value="-" class="minusbtn" data-field="quantity" button onclick="decreaseValue('Pistachio','quantity6','totalPriceText',14,'-',0)">
+                    <input type="number" step="1" max="" value="0" name="quantity" min="0" id="quantity6" class="quantity-field">
+                    <input type="button" value="+" class="plusbtn" data-field="quantity" button onclick="increaseValue('Pistachio','quantity6','totalPriceText',14,'+',0)">
+            </div>
+        </div>
+        <div class="column">
+            <p class="strawberryText" id="strawberryText">Strawberry</p>
+            <img class="ShopPic" src="../image/strawberry.jpeg" alt="Strawberry">
+            <p class="strawberryText2" id="strawberryText2">Strawberries ice-cream</p>
+            <div class="btn-group">
+                <span class="icecreamPrices1kg" id="strawberryPrice1">1 kg: 20$&nbsp;&nbsp;&nbsp;</span>
+                <input type="button" value="-" class="minusbtn" data-field="quantity" button onclick="decreaseValue('Strawberry','quantity7','totalPriceText',20,'-',1)">
+                <input type="number" step="1" max="" value="0" name="quantity" min="0" id="quantity7" class="quantity-field">
+                <input type="button" value="+" class="plusbtn" data-field="quantity" button onclick="increaseValue('Strawberry','quantity7','totalPriceText',20,'+',1)">
+                <p class="icecreamPrices05kg" id="strawberryPrice2">0.5 kg: 12$
+                    <input type="button" value="-" class="minusbtn" data-field="quantity" button onclick="decreaseValue('Strawberry','quantity8','totalPriceText',12,'-',0)">
+                    <input type="number" step="1" max="" value="0" name="quantity" min="0" id="quantity8" class="quantity-field">
+                    <input type="button" value="+" class="plusbtn" data-field="quantity" button onclick="increaseValue('Strawberry','quantity8','totalPriceText',12,'+',0)">
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <h1 class="menuTitle">EXTRAS</h1>
+
+    <div class="row">
+        <div class="column">
+            <p class="sauceText" id="sauceText">Pretzel sauce</p>
+            <img class="ShopPic" src="../image/sauce2.jpeg" alt="sauce">
+            <p class="sauceText2" id="sauceText2">Original pretzel sauce, sweet-salty</p>
+            <div class="btn-group">
+                <span class="icecreamPrices1kg" id="saucePrice1">30 ml: 2$
+                    <input type="button" value="-" class="minusbtn" data-field="quantity" button
+                        onclick="decreaseValue('Pretzel','quantity9','totalPriceText',2,'-',1)">
+                    <input type="number" step="1" max="" value="0" name="quantity" min="0" id="quantity9"
+                        class="quantity-field">
+                    <input type="button" value="+" class="plusbtn" data-field="quantity" button
+                        onclick="increaseValue('Pretzel','quantity9','totalPriceText',2,'+',1)">
+
+                    <p class="icecreamPrices05kg" id="saucePrice2">50 ml: 3$
+                        <input type="button" value="-" class="minusbtn" data-field="quantity" button
+                            onclick="decreaseValue('Pretzel','quantity10','totalPriceText',3,'-',0)">
+                        <input type="number" step="1" max="" value="0" name="quantity" min="0" id="quantity10"
+                            class="quantity-field">
+                        <input type="button" value="+" class="plusbtn" data-field="quantity" button
+                            onclick="increaseValue('Pretzel','quantity10','totalPriceText',3,'+',0)">
+            </div>
+        </div>
+
+        <div class="column">
+            <p class="pecanText" id="pecanText">Pecan</p>
+            <img class="ShopPic" src="../image/pecan.jpg" alt="Chocolate">
+            <p class="pecanText2" id="pecanText2">Sweet pecans in a personal box</p>
+            <div class="btn-group">
+                <span class="icecreamPrices1kg" id="pecanPrice1">20 gr: 1$
+                    <input type="button" value="-" class="minusbtn" data-field="quantity" button
+                        onclick="decreaseValue('Pecan','quantity11','totalPriceText',1,'-',1)">
+                    <input type="number" step="1" max="" value="0" name="quantity" min="0" id="quantity11"
+                        class="quantity-field">
+                    <input type="button" value="+" class="plusbtn" data-field="quantity" button
+                        onclick="increaseValue('Pecan','quantity11','totalPriceText',1,'+',1)">
+                    <p class="icecreamPrices05kg" id="pecanPrice2">50 gr: 2$
+                        <input type="button" value="-" class="minusbtn" data-field="quantity" button
+                            onclick="decreaseValue('Pecan','quantity12','totalPriceText',2,'-',0)">
+                        <input type="number" step="1" max="" value="0" name="quantity" min="0" id="quantity12"
+                            class="quantity-field">
+                        <input type="button" value="+" class="plusbtn" data-field="quantity" button
+                            onclick="increaseValue('Pecan','quantity12','totalPriceText',2,'+',0)">
+            </div>
+        </div>
+        <div class="column">
+            <p class="candiesText" id="candiesText">Candies</p>
+            <img class="ShopPic" src="../image/candys.jpg" alt="Candies">
+            <p class="candiesText2" id="candiesText2">Colored candies (natural ingredients)</p>
+            <div class="btn-group">
+                <span class="icecreamPrices1kg" id="candiesPrice1">20 gr: 1$
+                    <input type="button" value="-" class="minusbtn" data-field="quantity" button
+                        onclick="decreaseValue('Candies','quantity13','totalPriceText',1,'-',1)">
+                    <input type="number" step="1" max="" value="0" name="quantity" min="0" id="quantity13"
+                        class="quantity-field">
+                    <input type="button" value="+" class="plusbtn" data-field="quantity" button
+                        onclick="increaseValue('Candies','quantity13','totalPriceText',1,'+',1)">
+                    <p class="icecreamPrices05kg" id="candiesPrice1">50 gr: 2$
+                        <input type="button" value="-" class="minusbtn" data-field="quantity" button
+                            onclick="decreaseValue('Candies','quantity14','totalPriceText',2,'-',0)">
+                        <input type="number" step="1" max="" value="0" name="quantity" min="0" id="quantity14"
+                            class="quantity-field">
+                        <input type="button" value="+" class="plusbtn" data-field="quantity" button
+                            onclick="increaseValue('Candies','quantity14','totalPriceText',2,'+',0)">
+            </div>
+        </div>
+        <div class="column">
+            <p class="whiteChocolateText" id="whiteChocolateText">White Chocolate</p>
+            <img class="ShopPic" src="../image/white chocolate.jpg" alt="white chocolate">
+            <p class="whiteChocolateText2" id="whiteChocolateText2">Soft and sweet white chocolate chips</p>
+            <div class="btn-group">
+                <p class="icecreamPrices1kg" id="whiteChocolatePrice1">30 gr: 2$
+                    <input type="button" value="-" class="minusbtn" data-field="quantity" button
+                        onclick="decreaseValue('White_Chocolate','quantity15','totalPriceText',2,'-',1)">
+                    <input type="number" step="1" max="" value="0" name="quantity" min="0" id="quantity15"
+                        class="quantity-field">
+                    <input type="button" value="+" class="plusbtn" data-field="quantity" button
+                        onclick="increaseValue('White_Chocolate','quantity15','totalPriceText',2,'+',1)">
+                <p class="icecreamPrices05kg" id="whiteChocolatePrice2">50 gr: 3$
+                    <input type="button" value="-" class="minusbtn" data-field="quantity" button
+                        onclick="decreaseValue('White_Chocolate','quantity16','totalPriceText',3,'-',0)">
+                    <input type="number" step="1" max="" value="0" name="quantity" min="0" id="quantity16"
+                        class="quantity-field">
+                    <input type="button" value="+" class="plusbtn" data-field="quantity" button
+                        onclick="increaseValue('White_Chocolate','quantity16','totalPriceText',3,'+',0)">
+            </div>
+        </div>
+    </div>
+    </div>
+    <input type="number" class="totalPriceText" id="totalPriceText" value="0"></p>
+    <button class="order" onclick="window.location.href='iceCreamMenu.html'"><a href="../HTML/Shopping_Cart.html">order
+            now</a></button>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+{# CSS #}
+<link rel="stylesheet" href="{{ url_for('header.static', filename='css/header.css') }}"/>
+
+{# js #}
+<script src="{{ url_for('header.static', filename='js/header.js') }}"></script>
+
+
+<header id="Header">
+    <div class=picture_logo>
+        <img class=picture_logo src="{{ url_for('header.static', filename='media/logo.png') }}" alt="logo">
+    </div>
+    {%  if session.logged_in %}
+        <div id="login">
+            <label class=enter > Hello {{ session.user_data['username'] }}  </label>
+{#            <label class=enter > Hello {{ session.name['name'] }}  </label>#}
+            <a href="/LogOut">
+                <button class=border> Log Out</button> <br> <br>
+            </a>
+        </div>
+    {% else %}
+        <div id="login">
+            <a href="/SignUp">
+                <button class=border> Sign Up</button>
+            </a>
+            <a href="/SignIn">
+            <button class=border> Sign In</button> <br> <br>
+            </a>
+        </div>
+    {% endif %}
+
+
+    <div id="nav">
+        <nav class="navbar">
+            <!-- LOGO -->
+            <div class="logo"></div>
+            <!-- NAVIGATION MENU -->
+            <ul class="nav-links">
+                <!-- NAVIGATION MENUS -->
+                <div class="menu">
+                    <li><a href="/homepage">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/shop">Store</a></li>
+                    <li><a href="/cart">Cart</a></li>
+                </div>
+            </ul>
+        </nav>
+    </div>
+</header>

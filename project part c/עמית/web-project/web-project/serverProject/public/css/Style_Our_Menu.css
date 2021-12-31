@@ -1,0 +1,536 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../background/Our_Products1.jpg);
+    height: 10%;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    align-items: center;
+}
+
+
+/*---------Start-menuBar---------*/
+
+.menu-bar {
+    background: black;
+    text-align: center;
+    height: 10vh;
+    font-size: 1vw;
+}
+
+.menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: whitesmoke;
+}
+
+.menu-bar ul li {
+    width: 10vw;
+    margin: 0px;
+    padding: 1vh;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.menu-bar ul li:hover {
+    background: palevioletred;
+    border-radius: 3px;
+}
+
+.top_nav_btn {
+    object-fit: contain;
+    height: 5vh;
+    width: 100%;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+
+.sum-menu-1 {
+    display: none;
+}
+
+.menu-bar ul li:hover .sum-menu-1 {
+    display: block;
+    position: absolute;
+    background: black;
+    margin-top: 1vh;
+    margin-left: -1vh;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul {
+    display: block;
+    margin: 2vh;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul li {
+    width: 8vw;
+    padding: 1vh;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul li:last-child {
+    border-bottom: none;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul li a:hover {
+    color: palevioletred;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-bar {
+        font-size: 2vw;
+    }
+}
+
+
+/*---------End-menuBar---------*/
+
+
+/*---------------------------------------menu page-----------------------------------*/
+
+h1 {
+    text-align: center;
+    color: rgb(236, 42, 107);
+    margin: 25px 0px 20px;
+    font-family: Copperplate, Papyrus, fantasy;
+    text-shadow: 5px 5px 10px white;
+    font-size: 200%;
+}
+
+.column {
+    float: left;
+    margin: 1vh;
+    margin-top: 1vh;
+    width: 23vw;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* -------------btn----------------*/
+
+.btn-group {
+    float: inside;
+    margin-top: 1vh;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    padding: 2vh;
+    font-family: calibri, serif;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none;
+    font-family: calibri, serif;
+}
+
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btn-group .quantity-field {
+    position: relative;
+    background-color: rgb(219, 110, 146);
+    height: 3vh;
+    left: 5vh;
+    text-align: center;
+    width: 15%;
+    display: inline-block;
+    font-size: 13px;
+    margin: 0 0 5px;
+    resize: vertical;
+    border-color: black;
+    border-radius: 5px;
+    border-style: none;
+    border-width: thin;
+    padding: 1px;
+}
+
+.plusbtn {
+    font-weight: bold;
+    background-color: rgb(106, 228, 157);
+    opacity: 50%;
+    height: 3vh;
+    padding: 0%;
+    width: 4vh;
+    left: 5vh;
+    position: relative;
+    outline: none;
+    border-radius: 15px;
+}
+
+.minusbtn {
+    font-weight: bold;
+    background-color: rgb(236, 113, 113);
+    opacity: 50%;
+    height: 3vh;
+    padding: 0;
+    width: 4vh;
+    left: 5vh;
+    position: relative;
+    outline: none;
+    border-radius: 15px;
+}
+
+
+/*-------------inputs---------- */
+
+input[type="button"] {
+    -webkit-appearance: none;
+    cursor: pointer;
+    font-family: calibri, serif;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+}
+
+input[type="price"] {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    content: "$";
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input,
+textarea {
+    border: rgb(255, 249, 179);
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+    padding: 8px;
+}
+
+
+/*-------------ice cream items---------- */
+
+.ShopPic {
+    height: 45vh;
+    width: 23vw;
+    padding-top: 4px;
+}
+
+.strawberryText,
+.pistachioText,
+.chocolateText,
+.vanillaText,
+.sauceText,
+.pecanText,
+.candiesText,
+.whiteChocolateText {
+    position: relative;
+    width: 23vw;
+    height: 4vh;
+    left: 0%;
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
+    text-align: center;
+    font-family: Calibri, serif;
+    font-weight: bold;
+    font-size: 3vh;
+    text-align: center;
+}
+
+.strawberryText2,
+.pistachioText2,
+.chocolateText2,
+.vanillaText2,
+.sauceText2,
+.pecanText2,
+.candiesText2,
+.whiteChocolateText2 {
+    position: relative;
+    width: 23vw;
+    height: 4.5vh;
+    left: 0%;
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
+    text-align: center;
+    font-family: Calibri, serif;
+    font-size: 3vh;
+}
+
+.icecreamPrices {
+    position: relative;
+    height: 3vh;
+    left: 0vh;
+    text-align: center;
+    text-transform: uppercase;
+    width: 14vh;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 0 0px;
+    resize: vertical;
+    top: 0.1vh;
+    padding: 1px;
+}
+
+@media only screen and (max-width: 768px) {
+    .ShopPic {
+        height: 30vh;
+        width: 42vw;
+    }
+    .strawberryText,
+    .pistachioText,
+    .chocolateText,
+    .vanillaText,
+    .sauceText,
+    .pecanText,
+    .candiesText,
+    .whiteChocolateText {
+        font-size: 80%;
+        height: 3.5vh;
+        width: 42vw;
+    }
+    .strawberryText2,
+    .pistachioText2,
+    .chocolateText2,
+    .vanillaText2,
+    .sauceText2,
+    .pecanText2,
+    .candiesText2,
+    .whiteChocolateText2 {
+        font-size: 3vh;
+        height: 7.7vh;
+        width: 42vw;
+    }
+    .btn-group {
+        font-size: 3vh;
+        padding: 2%;
+        width: 42vw;
+        height: 10vh;
+        padding-bottom: 10%;
+        margin: 5px 0px 20px;
+    }
+    .plusbtn,
+    .minusbtn {
+        height: 3vh;
+        padding: 0;
+        width: 3vw;
+    }
+    .column {
+        width: 42vw;
+        margin-left: 5%;
+    }
+}
+
+
+/*--------check out-------*/
+
+.totalPriceText {
+    position: relative;
+    margin-top: 3%;
+    width: 10vh;
+    height: 5vh;
+    left: 47.5%;
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
+    text-align: center;
+    font-family: Calibri, serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.addToCart {
+    margin-left: 12%;
+    cursor: pointer;
+    background-color: rgb(240, 222, 176);
+    text-align: center;
+    font-size: 2vh;
+    font-weight: bold;
+    font-family: Calibri, serif;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(8, 8, 8);
+    transition: margin 0.5s;
+    height: 3vh;
+    width: 12vh
+}
+
+.order {
+    cursor: pointer;
+    margin-left: 45%;
+    margin-top: 1%;
+    background-color: rgb(240, 222, 176);
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Calibri, serif;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(8, 8, 8);
+    transition: margin 0.5s;
+    height: 5vh;
+    width: 20vh;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.order:hover {
+    background-color: rgb(240, 116, 209);
+}
+
+.no-outline:focus {
+    outline: none;
+}
+
+form {
+    width: 1px;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border: 1px solid black;
+    margin: 0;
+    text-align: center;
+}
+
+.value-button {
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 11px 0;
+    background: #eee;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.value-button:hover {
+    cursor: pointer;
+    text-align: center;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.value-button {
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 11px 0;
+    background: #eee;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.value-button:hover {
+    cursor: pointer;
+    text-align: center;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.value-button {
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 11px 0;
+    background: #eee;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.value-button:hover {
+    cursor: pointer;
+}
+
+form #decrease {
+    margin-right: -4px;
+    border-radius: 8px 0 0 8px;
+}
+
+form #increase {
+    margin-left: -4px;
+    border-radius: 0 8px 8px 0;
+}
+
+
+/* form #input-wrap {
+  margin: 0px;
+  padding: 0px;
+} */
+
+input#number {
+    text-align: center;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 25px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .order {
+        font-size: 100%;
+        margin-left: 38%;
+    }
+    .totalPriceText {
+        margin-left: -3%;
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glidali</title>
+    <link rel="stylesheet" href="../css/Style_Log_In_Page.css">
+    <script src="../js/Log_In_Page.js"></script>
+    <script>
+        function lettersOnly(input) {
+            var regex = /[^a-z]/gi;
+            input.value = input.value.replace(regex, "");
+        }
+    </script>
+    <script>
+        function numbersOnly(input) {
+            var regex = /[^0-9]/g;
+            input.value = input.value.replace(regex, "");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="menu-bar">
+        <ul>
+            <li><img class="top_nav_btn" id="openbtn_img" src="../image/menubar.png"><a href="#">Menu Bar</a>
+                <div class="sum-menu-1">
+                    <ul>
+                        <li><a href="../HTML/Our_Products.html">Glidali Gallery Products</a></li>
+                        <li><a href="../HTML/Do_It_By_Yourself.html">Do It By Yourself</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="../HTML/Home_Page.html"><img class="top_nav_btn" id="openbtn_img"
+                        src="../image/ice_cream2.png"></a><a href="../HTML/Home_Page.html"><i
+                        class="ice_cream2"></i>Home</a></li>
+            <li><a href="../HTML/Glidali_Story.html"><img class="top_nav_btn" id="Glidali_Story_img"
+                        class="Glidali_Story_img" src="../image/about us.png"></a><a
+                    href="../HTML/Glidali_Story.html">Our Story</a></li>
+            <li><a href="../HTML/Log_In_Page.html"><img class="top_nav_btn" id="newMembertn_img" class="newMembertn_img"
+                        src="../image/user2.png"></a><a href="../HTML/Log_In_Page.html">Log In</a></li>
+            <li><a href="../HTML/Contact_Us.html"><img class="top_nav_btn" id="phonebtn_img"
+                        src="../image/phone.png"></a><a href="../HTML/Contact_Us.html">Contact us</a></li>
+            <li><a href="../HTML/Shopping_Cart.html"><img class="top_nav_btn" id="shoppingCartbtn_img"
+                        src="../image/shopcart.png"></a><a href="../HTML/Shopping_Cart.html">My Cart</a></li>
+            <li><a href="../HTML/Our Menu.html"><img class="top_nav_btn" id="icecreamBtn_img"
+                        src="../image/ice_cream.png"></a><a href="../HTML/Our Menu.html">Our Products</a></li>
+            <li><a href="../HTML/Glidali_Events.html"><img class="top_nav_btn" id="icecreamBtn_img"
+                        src="../image/glidali.gif"></a><a href="../HTML/Glidali_Events.html">Our Events</a>
+        </ul>
+    </div>
+    <div>
+        <h2>Login</h2><br>
+        <form class="contact" action="http://localhost:3000/login" method="POST">
+            <input type="text" name="email" class="text-box" placeholder="Email" required><br><br>
+            <input type="text" name="password" class="text-box" placeholder="Password" required><br><br>
+            <center><input type="submit" name="sumbit" class="send-bth" value="Send"></center>
+            <br><br>
+            <center>
+                <h2>Not a User yet? </h2><a href="../HTML/Registration_Page.html"><input name="sumbit" class="send-bth"
+                        value="Click Here"></a>
+            </center>
+        </form>
+    </div>
+</body>
+
+</html>

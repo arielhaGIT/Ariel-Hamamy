@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../background/Our_Products.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+
+
+/*---------Start-menuBar---------*/
+
+.menu-bar {
+    background: black;
+    text-align: center;
+    height: 10vh;
+    font-size: 1vw;
+}
+
+.menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: whitesmoke;
+}
+
+.menu-bar ul li {
+    width: 10vw;
+    margin: 0px;
+    padding: 1vh;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.menu-bar ul li:hover {
+    background: palevioletred;
+    border-radius: 3px;
+}
+
+.top_nav_btn {
+    object-fit: contain;
+    height: 5vh;
+    width: 100%;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+
+.sum-menu-1 {
+    display: none;
+}
+
+.menu-bar ul li:hover .sum-menu-1 {
+    display: block;
+    position: absolute;
+    background: black;
+    margin-top: 1vh;
+    margin-left: -1vh;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul {
+    display: block;
+    margin: 2vh;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul li {
+    width: 8vw;
+    padding: 1vh;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul li:last-child {
+    border-bottom: none;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul li a:hover {
+    color: palevioletred;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-bar {
+        font-size: 2vw;
+    }
+}
+
+
+/*---------End-menuBar---------*/
+
+h1 {
+    text-align: center;
+    color: rgb(236, 42, 107);
+    margin: 30px 0 50px;
+    font-family: Copperplate, Papyrus, fantasy;
+    text-shadow: 5px 5px 10px white;
+    font-size: 350%;
+}
+
+.gallery {
+    margin: 10px 50px;
+}
+
+.gallery img {
+    width: 230px;
+    padding: 5px;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+
+.gallery img:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}

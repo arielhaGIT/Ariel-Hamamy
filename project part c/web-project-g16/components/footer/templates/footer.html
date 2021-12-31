@@ -1,0 +1,45 @@
+{# CSS #}
+<link rel="stylesheet" href="{{ url_for('footer.static', filename='css/footer.css') }}"/>
+
+{# js #}
+<script src="{{ url_for('footer.static', filename='js/footer.js') }}"></script>
+
+
+<footer id="footer">
+
+    <div class=footer id=media>
+        <b> Media </b>
+        <br> <br>
+
+        <a href="https://www.instagram.com/succulents3d/?hl=en">
+            <img class=picture src="{{ url_for('footer.static', filename='media/instanew.PNG') }}" alt="insta">
+        </a>
+
+        <a href="https://www.facebook.com/groups/255920461595819/user/100000226827774/">
+            <img class=picture src="{{ url_for('footer.static', filename='media/facebook.PNG') }}" alt="facebook">
+        </a>
+
+        <a href="https://twitter.com/Treesftf?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+            <img class=picture src="{{ url_for('footer.static', filename='media/twitter.PNG') }}" alt="twitter">
+        </a>
+    </div>
+
+    <div class=footer id= "googleMap" style="width:100%";>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwM32NKi7XSP0uVPI6pPp4YIEICkudsuE&callback=myMap">
+        </script>
+    </div>
+
+    <div class=footer id="info">
+        <b> Address </b> <br>
+        <p> Yitzahk Rager St, Beer-Sheva </p><br>
+
+        <b> Customer Service </b> <br>
+
+        <p>Phone: +972-54333333  </p>
+        <p>Activity Time: 9am - 5pm</p>
+
+        <a href='/returns'>
+            <button class="Refound"> Return & Refund Policy</button>
+        </a>
+    </div>
+</footer>

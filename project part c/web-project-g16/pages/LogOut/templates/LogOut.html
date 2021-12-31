@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Sign Up' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('SignUp.static', filename='css/UpdateDetails.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+ <main id="Main" class="login_center">
+     <style>
+        main{
+            background: url("{{ url_for('SignUp.static',filename='media/photo2.jpeg') }}") ;
+        }
+    </style>             <div class="login_img"></div>
+             <div class="login_text">
+                <div class="login_h">
+                    <div>SUCCULENTS<span>3D</span></div>
+                </div>
+
+                <div class="login">
+                    <form action=""  name="signUp" onsubmit="return SignUpvalidateForm()">
+                        <input type="text" placeholder="username" name="username"><br>
+                        <input type="email" placeholder="Email" name="email"><br>
+                        <input type="password" placeholder=" password" name="password"><br>
+                        <input type="password" placeholder="repeat password" name="password2"><br>
+                        <input type="Submit" value="Enter">
+                    </form>
+                </div>
+            </div>
+  </main>
+{% endblock %}
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('SignUp.static', filename='js/UpdateDetails.js') }}"></script>
+{% endblock %}

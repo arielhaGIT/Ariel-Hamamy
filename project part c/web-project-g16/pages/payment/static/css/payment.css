@@ -1,0 +1,75 @@
+
+.payment_img{
+  background-image: url('Pictures/payment3.jpg');
+  /* Center and scale the image nicely */
+  background-size: cover;
+ }
+
+
+#payment{
+    font-family: cursive;
+    border: 1px solid rgba(17, 17, 17, 0.6);
+    border-radius: 12px;
+	color: rgb(0, 0, 0);
+    display: grid;
+    background-color: rgb(221, 221, 221);
+     margin-left: 10%;
+	width: 75%;
+	padding: 20px;
+	z-index: 2;
+    opacity: 0.8;
+	font-size: 17px;
+}
+
+#payment input[type=Submit]{
+    position: relative;
+    margin-left: 35%;
+    width: 260px;
+	height: 35px;
+    text-align: center;
+	background: rgb(82, 82, 82);
+	border: 1px solid rgba(17, 17, 17, 0.6);
+	cursor: pointer;
+	border-radius: 2px;
+	color: #ffffff;
+	font-family: 'Exo', sans-serif;
+	font-size: 17px;
+	/* padding: 6px;
+	margin-top: 10px; */
+}
+#payment input [type=text]{
+    font-size: 17px;
+}
+
+
+#payment input[type=submit]:hover{
+    background-color: black;
+	opacity: 0.8;
+
+}
+
+#payment p{
+    text-align: center;
+}
+
+.PaymentH{
+    background: #158547;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5em;
+    border-radius: 0.6em;
+}
+
+
+/* ----------------mobile----------------- */
+
+@media only screen and (max-width:600px) {
+
+  /* --------------main---------------- */
+  #payment input[type=Submit]{
+    margin-left: 10%;
+
+   }
+
+}

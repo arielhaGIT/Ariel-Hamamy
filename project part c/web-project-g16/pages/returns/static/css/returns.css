@@ -1,0 +1,112 @@
+
+/* ------------------Main----------------- */
+.info{
+    display: grid;
+    grid-template-areas:
+    'ItemTable Contact'
+    ;
+    grid-template-columns: 70% 30%;
+
+}
+
+#ItemTable{
+    text-align: center;
+    grid-area: ItemTable;
+    border: 1px solid rgba(17, 17, 17, 0.6);
+    border-radius: 2px;
+	color: rgb(0, 0, 0);
+    background-color: rgb(221, 221, 221);
+	padding: 10px;
+    opacity: 0.8;
+	font-size: 16px;
+	font-weight: 400;
+
+	margin-top: 1%;
+
+    vertical-align: middle;
+    height: 97%;
+}
+
+#Contact{
+    grid-area:Contact ;
+    border: 1px solid rgba(17, 17, 17, 0.6);
+    border-radius: 2px;
+	color: rgb(0, 0, 0);
+    background-color: rgb(221, 221, 221);
+	padding: 10px;
+	z-index: 2;
+    opacity: 0.8;
+	font-size: 16px;
+	font-weight: 400;
+	margin: 14px;
+    vertical-align: middle;
+    height: 96%;
+
+    margin-top: 3%;
+}
+
+#Contact input[type=Submit]{
+	width: 260px;
+	height: 35px;
+    text-align: center;
+	background: rgb(82, 82, 82);
+	border: 1px solid rgba(17, 17, 17, 0.6);
+	cursor: pointer;
+	border-radius: 2px;
+	color: #ffffff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+
+}
+#Contact input[type=submit]:hover{
+    background-color: black;
+	opacity: 0.95;
+}
+
+.Title {
+    font-size: 22px;
+    color: rgb(19, 150, 80);
+    text-align: center;
+}
+
+.GreenInfo{
+    font-size: 16px;
+    color: rgb(14, 80, 45);
+    text-align: left;
+}
+
+.SubTitles{
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+
+
+
+
+/* ----------------mobile----------------- */
+
+@media only screen and (max-width:600px) {
+
+
+
+/* ------------main---------------- */
+    .info {
+        display: grid;
+        text-align: center;
+        grid-template-areas:
+        'ItemTable'
+        'Contact';
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+
+    #Contact{
+        margin-top: 0%;
+    }
+
+
+}

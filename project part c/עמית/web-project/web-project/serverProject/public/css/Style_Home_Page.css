@@ -1,0 +1,263 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../background/Our_Products.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+
+.photo {
+    margin-top: 15%;
+    top: 75%;
+}
+
+.container {
+    text-align: center;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.container span {
+    color: rgb(236, 42, 107);
+    text-transform: uppercase;
+    display: block;
+}
+
+.text1 {
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-top: 6%;
+    margin-bottom: 4%;
+    background: transparent;
+    position: relative;
+    animation: text 3s infinite;
+    /* animation-iteration-count: infinite; */
+    text-align: center;
+    color: rgb(236, 42, 107);
+    font-family: Copperplate, Papyrus, fantasy;
+    text-shadow: 5px 5px 10px white;
+    font-size: 350%;
+}
+
+.text2 {
+    font-size: 150%;
+    color: rgb(236, 42, 107);
+}
+
+@keyframes text {
+    0% {
+        color: rgb(236, 42, 107);
+        margin-bottom: -40px;
+    }
+    30% {
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+    85% {
+        letter-spacing: 8px;
+        margin-bottom: -40px;
+    }
+}
+
+
+/*---------Start-menuBar---------*/
+
+.menu-bar {
+    background: black;
+    text-align: center;
+    height: 10vh;
+    font-size: 1vw;
+}
+
+.menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: whitesmoke;
+}
+
+.menu-bar ul li {
+    width: 10vw;
+    margin: 0px;
+    padding: 1vh;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.menu-bar ul li:hover {
+    background: palevioletred;
+    border-radius: 3px;
+}
+
+.top_nav_btn {
+    object-fit: contain;
+    height: 5vh;
+    width: 100%;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+
+.sum-menu-1 {
+    display: none;
+}
+
+.menu-bar ul li:hover .sum-menu-1 {
+    display: block;
+    position: absolute;
+    background: black;
+    margin-top: 1vh;
+    margin-left: -1vh;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul {
+    display: block;
+    margin: 2vh;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul li {
+    width: 8vw;
+    padding: 1vh;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul li:last-child {
+    border-bottom: none;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul li a:hover {
+    color: palevioletred;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-bar {
+        font-size: 2vw;
+    }
+    .text1 {
+        font-size: 4vw;
+    }
+}
+
+
+/*---------End-menuBar---------*/
+
+.box {
+    float: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 5vh;
+    position: relative;
+    width: 50%;
+    height: 50%;
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
+    margin: 20% 25% -17%;
+}
+
+@media only screen and (max-width: 768px) {
+    .box {
+        float: center;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 5vh;
+        position: relative;
+        width: 1%;
+        height: 1%;
+        transform-style: preserve-3d;
+        animation: animate 20s linear infinite;
+        margin: 20% 25% 83%;
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.box span {
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg))translatez(400px);
+    -webkit-box-reflect: below 0px linear - gradient(transparent, transparent, #004);
+}
+
+.login {
+    align-items: center;
+    position: center;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: palevioletred;
+    color: white;
+    cursor: pointer;
+    font-family: sans-serif;
+    border-radius: 5px;
+    margin-top: 30%;
+    margin-bottom: 5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.register {
+    align-items: center;
+    position: center;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: palevioletred;
+    color: white;
+    cursor: pointer;
+    font-family: sans-serif;
+    border-radius: 5px;
+}
+
+.login:hover {
+    align-items: center;
+    background-color: white;
+    color: palevioletred;
+    font-weight: 600;
+    border: 1px solid palevioletred;
+}
+
+.register:hover {
+    align-items: center;
+    background-color: white;
+    color: palevioletred;
+    font-weight: 600;
+    border: 1px solid palevioletred;
+}
+
+.pic_1 {
+    width: 10%;
+    height: 10%;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Glidali</title>
+    <link rel="stylesheet" href="../css/Style_Contact_Us.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+        function lettersOnly(input) {
+            var regex = /[^a-z]/gi;
+            input.value = input.value.replace(regex, "");
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="menu-bar">
+        <ul>
+            <li><img class="top_nav_btn" id="openbtn_img" src="../image/menubar.png"><a href="#">Menu Bar</a>
+                <div class="sum-menu-1">
+                    <ul>
+                        <li><a href="../HTML/Our_Products.html">Glidali Gallery Products</a></li>
+                        <li><a href="../HTML/Do_It_By_Yourself.html">Do It By Yourself</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="../HTML/Home_Page.html"><img class="top_nav_btn" id="openbtn_img"
+                        src="../image/ice_cream2.png"></a><a href="../HTML/Home_Page.html"><i
+                        class="ice_cream2"></i>Home</a></li>
+            <li><a href="../HTML/Glidali_Story.html"><img class="top_nav_btn" id="Glidali_Story_img"
+                        class="Glidali_Story_img" src="../image/about us.png"></a><a
+                    href="../HTML/Glidali_Story.html">Our Story</a></li>
+            <li><a href="../HTML/Log_In_Page.html"><img class="top_nav_btn" id="newMembertn_img" class="newMembertn_img"
+                        src="../image/user2.png"></a><a href="../HTML/Log_In_Page.html">Log In</a></li>
+            <li><a href="../HTML/Contact_Us.html"><img class="top_nav_btn" id="phonebtn_img"
+                        src="../image/phone.png"></a><a href="../HTML/Contact_Us.html">Contact us</a></li>
+            <li><a href="../HTML/Shopping_Cart.html"><img class="top_nav_btn" id="shoppingCartbtn_img"
+                        src="../image/shopcart.png"></a><a href="../HTML/Shopping_Cart.html">My Cart</a></li>
+            <li><a href="../HTML/Our Menu.html"><img class="top_nav_btn" id="icecreamBtn_img"
+                        src="../image/ice_cream.png"></a><a href="../HTML/Our Menu.html">Our Products</a></li>
+            <li><a href="../HTML/Glidali_Events.html"><img class="top_nav_btn" id="icecreamBtn_img"
+                        src="../image/glidali.gif"></a><a href="../HTML/Glidali_Events.html">Our Events</a>
+        </ul>
+    </div>
+
+    <div class="contact-section">
+        <center>
+            <h1>Contact Us</h1>
+            <div class="contact-info">
+                <div><i class="fas fa-map-marker-alt"></i>Ya'akov Cohen St 5, Beersheba, Israel</div>
+                <div><i class="fas fa-envelope"></i>Glidali@email.com</div>
+                <div><i class="fas fa-phone"></i>+972-52-1234-567</div>
+                <div><i class="fas fa-clock"></i>Sun - Fri 8:00 AM to 8:00 PM</div>
+            </div>
+
+            <div class="contact-form">
+
+                <form class="contact" action="" method="post">
+                    <input type="text" name="name" class="text-box" placeholder="Your Frist Name" required
+                        onkeyup="lettersOnly(this)">
+                    <input type="email" name="email" class="text-box" placeholder="Your Email" required>
+                    <textarea type="message" rows="5" placeholder="Your Message" required></textarea>
+                    <input type="submit" name="sumbit" class="send-bth" value="Send"
+                        onclick="alert ('Your request was received successfully, we will get back to you soon!')">
+                </form>
+            </div>
+        </center>
+    </div>
+</body>
+
+</html>

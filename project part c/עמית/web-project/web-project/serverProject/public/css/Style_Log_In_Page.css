@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../background/Our_Products.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+
+
+/*---------Start-menuBar---------*/
+
+.menu-bar {
+    background: black;
+    text-align: center;
+    height: 10vh;
+    font-size: 1vw;
+}
+
+.menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: whitesmoke;
+}
+
+.menu-bar ul li {
+    width: 10vw;
+    margin: 0px;
+    padding: 1vh;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.menu-bar ul li:hover {
+    background: palevioletred;
+    border-radius: 3px;
+}
+
+.top_nav_btn {
+    object-fit: contain;
+    height: 5vh;
+    width: 100%;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+
+.sum-menu-1 {
+    display: none;
+}
+
+.menu-bar ul li:hover .sum-menu-1 {
+    display: block;
+    position: absolute;
+    background: black;
+    margin-top: 1vh;
+    margin-left: -1vh;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul {
+    display: block;
+    margin: 2vh;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul li {
+    width: 8vw;
+    padding: 1vh;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul li:last-child {
+    border-bottom: none;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul li a:hover {
+    color: palevioletred;
+}
+
+@media only screen and (max-width: 600px) {
+    .menu-bar {
+        background: black;
+        text-align: center;
+        height: 10vh;
+        font-size: 2vw;
+    }
+}
+
+
+/*---------End-menuBar---------*/
+
+h1 {
+    text-align: center;
+    color: black;
+    font-family: sans-serif;
+    font-size: 60px;
+    text-decoration: underline;
+}
+
+h2 {
+    text-align: center;
+    color: rgb(236, 42, 107);
+    margin: 30px 0 50px;
+    font-family: Copperplate, Papyrus, fantasy;
+    text-shadow: 5px 5px 10px white;
+    font-size: 350%;
+}
+
+.contact .text-box {
+    text-align: center;
+    background: rgb(252, 238, 238);
+    color: black;
+    border: none;
+    width: 40vw;
+    height: 10vh;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    margin-right: 20%;
+    margin-left: 30%;
+    opacity: 0.9;
+}
+
+.contact .text-box:first-child {
+    margin-right: 15px;
+}
+
+.contact .textarea {
+    text-align: center;
+    background: #000;
+    color: black;
+    border: none;
+    width: 50%;
+    padding: 12px;
+    font-size: 15px;
+    min-height: 200px;
+    max-height: 400px;
+    resize: vertical;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.contact .send-bth {
+    text-align: center;
+    background: palevioletred;
+    color: black;
+    border: none;
+    width: 120px;
+    height: 40px;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 20px;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact .send-bth:hover {
+    background: palevioletred;
+    color: white;
+    font-family: sans-serif;
+}

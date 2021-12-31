@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Sign Up' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('UpdateDetails.static', filename='css/UpdateDetails.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+ <main id="Main" class="login_center">
+     <style>
+        main{
+            background: url("{{ url_for('UpdateDetails.static',filename='media/photo2.jpeg') }}") ;
+        }
+    </style>             <div class="login_img"></div>
+             <div class="login_text">
+                <div class="login_h">
+                    <div>SUCCULENTS<span>3D</span></div>
+                </div>
+
+                <div class="login">
+                    <form action="/update_user" method="POST" name="UpdateDetails" onsubmit="return UpdateDetailsvalidateForm()">
+                        <input class="inputUpdate" type="email" placeholder="Email" name="email"><br>
+                        <input class="inputUpdate" type="text" placeholder="phone" name="phone"><br>
+                        <input class="inputUpdate" type="password" placeholder="old password" name="oldpassword"><br>
+                        <input class="inputUpdate" type="password" placeholder="new password" name="newpassword"><br>
+                        <input class="inputUpdate" type="password" placeholder="repeat new password" name="newpassword2"><br>
+                        <input type="Submit" value="Enter">
+                    </form>
+                </div>
+                 {% if session.userAlreadyExists %}
+                        <a> Username Already Exists please choose another one </a>
+                    {% endif %}
+            </div>
+  </main>
+{% endblock %}
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('UpdateDetails.static', filename='js/profile.js') }}"></script>
+{% endblock %}

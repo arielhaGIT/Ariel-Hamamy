@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glidali</title>
+    <link rel="stylesheet" href="../css/Style_Products.css">
+    <link rel="stylesheet" href="../css/lightbox.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="menu-bar">
+            <ul>
+                <li><img class="top_nav_btn" id="openbtn_img" src="../image/menubar.png"><a href="#">Menu Bar</a>
+                    <div class="sum-menu-1">
+                        <ul>
+                            <li><a href="../HTML/Our_Products.html">Glidali Gallery Products</a></li>
+                            <li><a href="../HTML/Do_It_By_Yourself.html">Do It By Yourself</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="../HTML/Home_Page.html"><img class="top_nav_btn" id="openbtn_img" src="../image/ice_cream2.png"></a><a href="../HTML/Home_Page.html"><i
+                            class="ice_cream2"></i>Home</a></li>
+                <li>
+                    <a href="../HTML/Glidali_Story.html"><img class="top_nav_btn" id="Glidali_Story_img" class="Glidali_Story_img" src="../image/about us.png"></a><a href="../HTML/Glidali_Story.html">Our Story</a></li>
+                <li>
+                    <a href="../HTML/Log_In_Page.html"><img class="top_nav_btn" id="newMembertn_img" class="newMembertn_img" src="../image/user2.png"></a><a href="../HTML/Log_In_Page.html">Log
+                        In</a></li>
+                <li>
+                    <a href="../HTML/Contact_Us.html"><img class="top_nav_btn" id="phonebtn_img" src="../image/phone.png"></a><a href="../HTML/Contact_Us.html">Contact us</a></li>
+                <li>
+                    <a href="../HTML/Shopping_Cart.html"><img class="top_nav_btn" id="shoppingCartbtn_img" src="../image/shopcart.png"></a><a href="../HTML/Shopping_Cart.html">My Cart</a></li>
+                <li>
+                    <a href="../HTML/Our Menu.html"><img class="top_nav_btn" id="icecreamBtn_img" src="../image/ice_cream.png"></a><a href="../HTML/Our Menu.html">Our Products</a></li>
+                <li>
+                    <a href="../HTML/Glidali_Events.html"><img class="top_nav_btn" id="icecreamBtn_img" src="../image/glidali.gif"></a><a href="../HTML/Glidali_Events.html">Our Events</a>
+            </ul>
+        </div>
+
+    </header>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        $(window).scroll(function() {
+            if ($(window).scrollTop()) {
+                $("nav").addClass("black");
+            } else {
+                $("nav").removeClass("black");
+            }
+        });
+    </script>
+
+    <h1> Glidali Gallery Products</h1>
+    <div class="gallery">
+        <a href="../Our_Products/ice_cream_1.jpg" data-lightbox="mygallery" data-title="ice_cream_1"><img src="../Our_Products/ice_cream_1_small.jpg"></a>
+        <a href="../Our_Products/ice_cream_2.jpg" data-lightbox="mygallery" data-title="ice_cream_2"><img src="../Our_Products/ice_cream_2_small.jpg"></a>
+        <a href="../Our_Products/ice_cream_3.jpg" data-lightbox="mygallery" data-title="ice_cream_3"><img src="../Our_Products/ice_cream_3_small.jpg"></a>
+        <a href="../Our_Products/ice_cream_4.jpg" data-lightbox="mygallery" data-title="ice_cream_4"><img src="../Our_Products/ice_cream_4_small.jpg"></a>
+        <a href="../Our_Products/ice_cream_5.jpg" data-lightbox="mygallery" data-title="ice_cream_5"><img src="../Our_Products/ice_cream_5_small.jpg"></a>
+        <a href="../Our_Products/ice_cream_6.jpg" data-lightbox="mygallery" data-title="ice_cream_6"><img src="../Our_Products/ice_cream_6_small.jpg"></a>
+        <a href="../Our_Products/ice_cream_7.jpg" data-lightbox="mygallery" data-title="ice_cream_7"><img src="../Our_Products/ice_cream_7_small.jpg"></a>
+        <a href="../Our_Products/ice_cream_8.jpg" data-lightbox="mygallery" data-title="ice_cream_8"><img src="../Our_Products/ice_cream_8_small.jpg"></a>
+        <a href="../Our_Products/ice_cream_9.jpg" data-lightbox="mygallery" data-title="ice_cream_9"><img src="../Our_Products/ice_cream_9_small.jpg"></a>
+        <a href="../Our_Products/ice_cream_10.jpg" data-lightbox="mygallery" data-title="ice_cream_10"><img src="../Our_Products/ice_cream_10_small.jpg"></a>
+    </div>
+</body>
+
+</html>

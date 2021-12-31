@@ -10,9 +10,6 @@
         <input type="submit">
         </form>
         {% if search_user=="" %}
-            {% for key, value in users.items() %}
-                <h2>{{ key }}: {{ value }}</h2>
-            {% endfor %}
             <span>
                     {% for t in users.values() %}
                         {% for x in t %}

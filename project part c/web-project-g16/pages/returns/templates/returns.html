@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Returns' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('returns.static', filename='css/returns.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+     <main id="Main">
+            <div class="info">
+                <div id="ItemTable">
+                    <div class="Title">
+                        <label class=items> Return & Refund Policy</label> <br>
+                    </div>
+                    <div id="GreenInfo">
+                        <p>
+                            Thanks for shopping at Succulents3D.
+                            If you are not entirely satisfied with your purchase, we're here to help. <br> <br>
+                        </p>
+                        <div class="SubTitles">
+                            <p>
+                                Returns <br>
+                            </p>
+
+                        </div>
+                        <p>
+                            You have 30 calendar days to return an item from the date you received it.
+                            To be eligible for a return, your item must be unused and in the same condition that you received it.
+                            Your item must be in the original packaging.
+                            Your item needs to have the receipt or proof of purchase. <br> <br>
+                        </p>
+                        <div class="SubTitles">
+                            <p>
+                                Refunds <br>
+                            </p>
+                        </div>
+                        <p>
+                            Once we receive your item, we will inspect it and notify you that we have received your returned
+                            item. We will immediately notify you on the status of your refund after inspecting the item.
+                            If your return is approved, we will initiate a refund to your credit card (or original method of
+                            payment).
+                            You will receive the credit within a certain amount of days, depending on your card issuer's policies.
+                        </p>
+
+                    </div>
+                </div>
+                <div id="Contact">
+                    <div class="Title">
+                    describe your issue below:
+                    </div> <br>
+                    <form action="/action_page.php">
+                        <label class="GreenInfo" for="id1">First name:</label>
+                        <input type="text" id="id1" minlength="4" name="fname"><br><br>
+                        <label class="GreenInfo" for="id2">Last name:</label>
+                        <input type="text" id="id2" minlength="4" name="lname"><br><br>
+                        <label class="GreenInfo" >your problem:</label> <br>
+                        <textarea name="problem" id = "id3" required minlength="20" cols="40" rows="5" ></textarea> <br>
+                        <label class="GreenInfo">image:</label>
+                        <input type="file" id="file" name="file"><br><br>
+                        <input onclick="validationReturns()" type="submit" value="Submit">
+                        <p id="demo"></p>
+                    </form>
+                </div>
+            </div>
+        </main>
+{% endblock %}
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('returns.static', filename='js/returns.js') }}"></script>
+{% endblock %}

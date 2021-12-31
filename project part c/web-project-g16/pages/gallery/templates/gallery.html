@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'gallery' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('gallery.static', filename='css/gallery.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+    <main id="Main" class="gallery_center">
+
+        <img class=gallery_picture src="{{ url_for('gallery.static', filename='media/photo11.jpeg') }}" alt="">
+        <img class=gallery_picture src="{{ url_for('gallery.static', filename='media/event4.jpeg') }}" alt="">
+        <img class=gallery_picture src="{{ url_for('gallery.static', filename='media/photo1.jpeg') }}" alt="">
+        <img class=gallery_picture src="{{ url_for('gallery.static', filename='media/photo3.jpeg') }}" alt="">
+        <img class=gallery_picture src="{{ url_for('gallery.static', filename='media/photo4.jpeg') }}" alt="">
+        <img class=gallery_picture src="{{ url_for('gallery.static', filename='media/photo6.jpeg') }}" alt="">
+        <img class=gallery_picture src="{{ url_for('gallery.static', filename='media/photo7.jpeg') }}" alt="">
+        <img class=gallery_picture src="{{ url_for('gallery.static', filename='media/item3.png') }}" alt="">
+        <img class=gallery_picture src="{{ url_for('gallery.static', filename='media/photo10.jpeg') }}" alt="">
+
+
+    </main>
+{% endblock %}
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('gallery.static', filename='js/gallery.js') }}"></script>
+{% endblock %}

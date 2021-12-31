@@ -2,16 +2,21 @@ from flask import Flask, redirect, url_for
 from flask import render_template
 from flask import request
 from flask import session
+from interact_with_DB import interact_db
+
+
 
 app = Flask(__name__)
 app.secret_key = '123'
+app.config.from_pyfile('settings.py')
+
+
 
 users = {'user1': { 'Name': 'Yossi', 'Last name': 'cohen', 'Email': 'yossi@gmail.com'},
          'user2': { 'Name': 'Yotam', 'Last name': 'Hen', 'Email': 'yotem@gmail.com'},
          'user3': {'Name': 'Ariel', 'Last name': 'Hamamy', 'Email': 'ariel@gmail.com'},
          'user4': {'Name': 'Gal', 'Last name': 'Baron', 'Email': 'gal@gmail.com'},
-         'user5': {'Name': 'Matan', 'Last name': 'Ron', 'Email': 'matan@gmail.com'},
-        }
+         'user5': {'Name': 'Matan', 'Last name': 'Ron', 'Email': 'matan@gmail.com'}}
 
 @app.route('/')
 def home_func():  # put application's code here
@@ -19,13 +24,16 @@ def home_func():  # put application's code here
 
 @app.route('/assignment9', methods=['GET', 'POST'])
 def login_func():  # put application's code here
+    print(users.values())
     if request.method == 'GET':
-        if 'search_user' in request.args:
-            search_user = request.args['search_user']
-            return render_template('assignment9.html', username=session['username']
-                                                     , search_user=search_user
-                                                     , users=users)
-        return render_template('assignment9.html', username=session['username'])
+        if session['username']:
+            if 'search_user' in request.args:
+                search_user = request.args['search_user']
+                return render_template('assignment9.html', username=session['username']
+                                       , search_user=search_user
+                                       , users=users)
+            return render_template('assignment9.html', users=users, username=session['username'])
+        return render_template('assignment9.html', users=users)
     if request.method == 'POST':
         #DB
         username = request.form['username']
@@ -55,6 +63,12 @@ def about_func():  # put application's code here
                            second_name=second_name,
                            degreas=['BSc', 'MSc', 'GrandMaster'],
                            hobies=('art', 'music', 'sql'))
+
+###### Pages
+## assignment10
+from pages.assignment10.assignment10 import assignment10
+app.register_blueprint(assignment10)
+
 
 
 if __name__ == '__main__':

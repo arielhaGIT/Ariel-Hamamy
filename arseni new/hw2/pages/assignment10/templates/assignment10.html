@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+assignment10
+{% endblock %}
+
+{% block tohen %}
+     <h1>Users' Page</h1>
+    <form action="/insert_user" method="post"> <!--  post because dealing with passwords -->
+        <input type="text" name="name" placeholder="Name">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" value="Insert">
+    </form>
+    <hr>
+   <h2>Users' List:</h2>
+    {% for user in users %}
+        <li>
+            <form action="/delete_user" method="post" style="display: inline">
+                <input type="hidden" name="id" value="{{ user.id }}">
+                <input type="submit" value="Delete">
+            </form>
+            ID: {{ user.id }} &emsp;Name: {{ user.name }} &emsp;Email: {{ user.email }}
+        </li>
+    {% endfor %}
+    <h2 id="userAction"></h2>
+    <hr>
+
+    <h1>Update Form:</h1>
+    <h2>enter user Id and then the new details for this user </h2>
+    <form name="update" method="POST" action="/update_User">
+        <input name="id" type="text" placeholder="enter user Id ">
+        <input name="name" type="text" placeholder="enter your user name">
+        <input name="email" type="email" placeholder="enter your email">
+        <input name="password" type="password" placeholder="enter your password">
+        <input type="submit">
+    </form>
+
+    <script>
+       change_acording_to_querry();
+    </script>
+
+{% endblock %}
+

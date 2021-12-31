@@ -2,9 +2,11 @@ from flask import Flask, redirect, url_for
 from flask import render_template
 from flask import request
 from flask import session
+from interact_with_DB import interact_db
 
 app = Flask(__name__)
 app.secret_key = '123'
+
 
 @app.route('/')
 def home_func():  # put application's code here
@@ -54,6 +56,40 @@ def about_func():  # put application's code here
                            degreas=['BSc', 'MSc', 'GrandMaster'],
                            hobies=('art', 'music', 'sql'))
 
+@app.route('/users')
+def users_func():
+    query = 'select * from users;'
+    users = interact_db(query=query, query_type='fetch')
+    return render_template('users.html', users=users)
+
+
+@app.route('/insert_user', methods=['post'])  # get the record that was inserted into the form
+def insertUsers():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        password = request.form['password']
+
+        check_input = "SELECT name FROM web.users WHERE name='%s';" % name
+        answer = interact_db(query=check_input, query_type='fetch')
+        if len(answer) == 0:
+            query = "insert into web.users (name, email , password)\
+                            value ('%s', '%s', '%s');" % (name, email, password)
+            interact_db(query=query, query_type='commit')
+            # message
+            return redirect('/users')
+        else:
+            # message
+            return redirect('/users')
+    return render_template('users.html', req_method=request.method)
+
+
+@app.route('/delete_user', methods=['post'])
+def delete_user_func():
+    user_id = request.form['id']
+    query = "delete from users where id='%s';" % user_id
+    interact_db(query=query, query_type='commit')
+    return redirect('/users')
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,0 +1,278 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../background/Our_Products.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(236, 42, 107);
+    font-family: Copperplate, Papyrus, fantasy;
+    text-shadow: 5px 5px 10px white;
+    font-size: 200%;
+}
+
+
+/*---------Start-menuBar---------*/
+
+.menu-bar {
+    background: black;
+    text-align: center;
+    height: 10vh;
+    font-size: 1vw;
+}
+
+.menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: whitesmoke;
+}
+
+.menu-bar ul li {
+    width: 10vw;
+    margin: 0px;
+    padding: 1vh;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.menu-bar ul li:hover {
+    background: palevioletred;
+    border-radius: 3px;
+}
+
+.top_nav_btn {
+    object-fit: contain;
+    height: 5vh;
+    width: 100%;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+
+.sum-menu-1 {
+    display: none;
+}
+
+.menu-bar ul li:hover .sum-menu-1 {
+    display: block;
+    position: absolute;
+    background: black;
+    margin-top: 1vh;
+    margin-left: -1vh;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul {
+    display: block;
+    margin: 2vh;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul li {
+    width: 8vw;
+    padding: 1vh;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul li:last-child {
+    border-bottom: none;
+}
+
+.menu-bar ul li:hover .sum-menu-1 ul li a:hover {
+    color: palevioletred;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-bar {
+        font-size: 2vw;
+    }
+}
+
+
+/*---------End-menuBar---------*/
+
+
+/*-----the top box: our perfect recip------*/
+
+.top-row {
+    grid-template-columns: auto;
+    width: 130vh;
+    padding: 2%;
+    border-style: double;
+    font-family: calibri, serif;
+    font-size: 20px;
+    margin-right: 60vh;
+    text-align: center;
+    border-radius: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: left;
+    margin: 20%;
+    margin-top: 3vh;
+}
+
+.top-row1 {
+    width: 92%;
+    padding: 2%;
+    padding-left: 6%;
+    border-style: double;
+    font-family: calibri, serif;
+    font-size: 20px;
+    margin-right: 60vh;
+    text-align: left;
+    border-radius: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: left;
+    margin: 0%;
+    margin-top: 1vh;
+}
+
+.top-row2 {
+    width: 92%;
+    padding: 2%;
+    padding-left: 6%;
+    border-style: double;
+    font-family: calibri, serif;
+    font-size: 20px;
+    margin-right: 60vh;
+    text-align: left;
+    border-radius: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: left;
+    margin: 5%;
+    margin-top: 1vh;
+}
+
+.left-column {
+    grid-template-columns: auto;
+    width: 52%;
+    padding: 4%;
+    border-style: double;
+    font-family: calibri, serif;
+    font-size: 20px;
+    margin-right: 60vh;
+    text-align: left;
+    border-radius: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: left;
+    margin: 4.8%;
+    margin-top: 1vh;
+}
+
+.leftPic {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    color: white;
+    padding: 1px 1px;
+    border: none;
+}
+
+.right-column {
+    grid-template-columns: auto;
+    width: 36%;
+    padding: 2.3%;
+    padding-left: 5%;
+    border-style: double;
+    font-family: calibri, serif;
+    font-size: 20px;
+    text-align: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: left;
+    margin: -8px;
+    margin-top: 1vh;
+    margin-bottom: 0.7vh;
+}
+
+@media only screen and (max-width: 768px) {
+    .top-row,
+    .top-row1,
+    .top-row2,
+    .right-column,
+    .left-column {
+        font-size: 3vw;
+    }
+    .left-column {
+        width: 40%;
+    }
+    .right-column {
+        width: 50%;
+    }
+    .top-row {
+        width: 65vh;
+        margin: 2.5vh;
+        padding-top: 3vh;
+    }
+}
+
+
+/*-----the bottom box: video------*/
+
+.bottom-row {
+    grid-template-columns: auto;
+    width: 40%;
+    padding: 1%;
+    border-style: double;
+    font-family: calibri, serif;
+    font-size: 20px;
+    margin-right: 60vh;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: left;
+    margin: 30%;
+    margin-top: -35vh;
+    margin-bottom: 4vh;
+}
+
+.moveToOrder {
+    object-fit: contain;
+    height: 10%;
+    width: 17%;
+    cursor: pointer;
+    color: black;
+    background-color: rgb(247, 234, 217);
+    padding: 1px 1px;
+    border: black;
+    border-width: thin;
+    border-radius: 15%;
+    border-style: solid;
+}
+
+.moveToOrder:hover {
+    background-color: rgb(248, 217, 177);
+}
+
+.right-column:hover,
+.top-row2:hover {
+    background-color: rgb(228, 177, 212);
+}
+
+#iceCreamMaking-video {
+    border-style: double;
+    width: 80%;
+    height: 30vh;
+}
+
+@media only screen and (max-width: 768px) {
+    .bottom-row {
+        font-size: 3vw;
+        width: 55vh;
+        margin: 12%;
+    }
+    .moveToOrder {
+        font-size: 1.8vh;
+    }
+}

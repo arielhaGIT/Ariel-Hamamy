@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Sign In' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('SignIn.static', filename='css/SignIn.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+  <main id="Main" class="login_center">
+     <style>
+        main{
+            background: url("{{ url_for('SignIn.static',filename='media/photo2.jpeg') }}") ;
+        }
+    </style>
+            <div class="login_img"></div>
+            <div class="login_text">
+                <div class="login_h">
+                    <div>SUCCULENTS<span>3D</span></div>
+                </div>
+
+                <div class="login">
+                    <form method="POST" action="/SignIn" name="signIn">
+                        <input type="text" placeholder="username" name="username"><br>
+                        <input type="password" placeholder=" password" name="password"><br>
+                        <input type="Submit" value="Enter">
+                    </form>
+                    {% if session.WrongDetails %}
+                        <a>password or user-name is invalid</a>
+                    {% endif %}
+                </div>
+
+           </div>
+  </main>
+{% endblock %}
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('SignIn.static', filename='js/SignIn.js') }}"></script>
+{% endblock %}

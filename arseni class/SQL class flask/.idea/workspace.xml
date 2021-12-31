@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="91a128e8-b5fd-4c27-9c05-5463c31bf49a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../SQL Flask/.idea/SQL Flask.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL Flask/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/SQL class flask.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClassProject/templates/users.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL class/.idea/SQL class.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL class/components/.idea/components.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../class3/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../class3/interact_with_DB.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../class3/templates/users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PROJECT/web-project-g16" beforeDir="false" afterPath="$PROJECT_DIR$/../../PROJECT/web-project-g16" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassProject/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/ClassProject/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassProject/templates/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClassProject/templates/catalog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassProject/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClassProject/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassProject/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClassProject/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassProject/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClassProject/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../class3/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../class3/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../class3/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/../class3/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../arseni new/hw2/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../arseni new/hw2/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../arseni new/hw2/templates/assignment8.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../arseni new/hw2/templates/assignment8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../arseni new/hw2/templates/assignment9.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../arseni new/hw2/templates/assignment9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../arseni new/hw2/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../arseni new/hw2/templates/header.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/ClassProject" />
+  </component>
+  <component name="ProjectId" id="22eJChBothA72I8T8S1QIXNi7eb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../class3" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="91a128e8-b5fd-4c27-9c05-5463c31bf49a" name="Changes" comment="" />
+      <created>1640191993735</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640191993735</updated>
+      <workItem from="1640191995063" duration="39000" />
+      <workItem from="1640192349020" duration="31000" />
+      <workItem from="1640192521551" duration="73000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,62 @@
+
+/* ------------------Main----------------- */
+
+.Cart{
+
+    display: grid;
+    grid-template-areas:
+    'ItemTable  Contact'
+    ;
+        grid-template-columns: 80% 20%;
+}
+
+#ItemTable{
+    /* text-align: center; */
+    grid-area: ItemTable;
+    border: 1px solid rgba(17, 17, 17, 0.6);
+    border-radius: 2px;
+	color: rgb(0, 0, 0);
+    background-color: rgb(221, 221, 221);
+	padding: 10px;
+	z-index: 2;
+    opacity: 0.8;
+	font-size: 16px;
+	font-weight: 400;
+
+
+    vertical-align: middle;
+    height: 100%;
+    font-size: 16px;
+    color: rgb(14, 80, 45);
+    text-align: left;
+}
+
+.pictureAbout{
+    width: 100%;
+    border: 1.5px solid black;    border-radius: 0%;
+
+}
+
+
+
+.SubTitles{
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+
+
+/* ----------------mobile----------------- */
+
+@media only screen and (max-width:600px) {
+
+
+    .Cart{
+        display: grid;
+        grid-template-areas:
+        'ItemTable'
+        'Contact'
+    ;
+    grid-template-columns: 100%;
+    }
+}

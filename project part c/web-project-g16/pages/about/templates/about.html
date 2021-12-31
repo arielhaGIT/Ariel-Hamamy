@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'About' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('about.static', filename='css/about.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+    <main id="Main">  <br>
+        <div class="Cart">
+            <div id="ItemTable">
+                    <br>
+
+                    <div id="SubTitles">
+                        <p> About Us <br> </p>
+                    </div>
+
+                    <p>
+                        Succulent 3D is a store that offers personalized flowerpots that are printed on a 3D printer.
+                        We believe that everyone can add joy and color to their home, depending on their personal taste and style.
+                        Our goal is to enrich the lifestyle of everyone who loves innovation and creativity, alongside good quality and prices.
+                        We are committed to providing quality, professional, experiential service and providing the best response to the customer's needs.
+                        <br> <br>
+                    </p>
+
+                    <div class="SubTitles">
+                        <p> Our customers <br> </p>
+                    </div>
+
+                    <p>
+                        We believe in a world where you have total freedom to be you, without judgement.
+                        To express yourself.  So we make sure everyone can choose what shape and color they want for their flowerpots. <br><br>
+
+                    </p>
+
+                    <div class="SubTitles">
+                        <p> Media <br> </p>
+                    </div>
+
+                    <p>
+                        We also work on social media. Clicking on one of the icons at the bottom of the page will take you to our page on the social network Facebook or Instagram.
+                    </p>
+            </div>
+
+            <div id="Contact">
+                <img class=pictureAbout src="{{ url_for('about.static', filename='media/photo7.jpeg') }}" alt="logo">
+                <img class=pictureAbout src="{{ url_for('about.static', filename='media/base2.png') }}" alt="logo">
+            </div>
+
+        </div> <br>
+    </main>
+{% endblock %}
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('about.static', filename='js/about.js') }}"></script>
+{% endblock %}
