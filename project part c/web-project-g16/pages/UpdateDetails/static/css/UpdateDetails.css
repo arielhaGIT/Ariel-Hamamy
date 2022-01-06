@@ -1,3 +1,4 @@
-.hide{
-    display: none;
+.inputUpdate{
+    visibility:hidden
+    /*display: none;*/
 }

@@ -3,7 +3,7 @@
 {% set page_head_title = 'Sign Up' %}
 
 {% block page_head_css %}
-    <link rel="stylesheet" href="{{ url_for('SignUp.static', filename='css/UpdateDetails.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('SignUp.static', filename='css/SignUp.css') }}"/>
 {% endblock %}
 
 {% block page_body_main_content %}
@@ -25,6 +25,8 @@
                         <input type="text" placeholder="first name" name="firstname"><br>
                         <input type="text" placeholder="last name" name="lastname"><br>
                         <input type="text" placeholder="phone" name="phone"><br>
+                        <input type="text" placeholder="address" name="address"><br>
+                        <input type="date" placeholder="birth-date" name="birthdate" value="1990-01-01" max="2005-12-31"><br>
                         <input type="password" placeholder=" password" name="password"><br>
                         <input type="password" placeholder="repeat password" name="password2"><br>
                         <input type="Submit" value="Enter">
@@ -39,5 +41,5 @@
 
 
 {% block page_body_js %}
-    <script src="{{ url_for('SignUp.static', filename='js/UpdateDetails.js') }}"></script>
+    <script src="{{ url_for('SignUp.static', filename='js/SignUp.js') }}"></script>
 {% endblock %}

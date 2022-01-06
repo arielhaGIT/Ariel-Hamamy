@@ -15,12 +15,20 @@
     }
     </style>
             <div id=payment>
-                    <form action=""  name="paymentForm" onsubmit="return paymentValidation()">
+                    <form action="/payment" method="POST" name="paymentForm" onsubmit="return paymentValidation()" >
                         <p class="PaymentH"> <label> Choose Delivery Method </label> </p><br>
-                        <input type="radio" id="Pick_Up" name="Delivery_Method" value="Pick_Up" >
+                        <input type="radio" id="Pick_Up" name="Delivery_Method" value="Pick_Up" onclick="displayHide()">
                         <label for="Pick_Up">Pick Up </label> <br>
-                        <input type="radio" id="current_Address" name="Delivery_Method" value="current_Address">
-                        <label for="current_Address">Delivery to current adress  </label><br>
+                        <input type="radio" id="current_Address" name="Delivery_Method" value="current_Address" onclick="displayHide()">
+                        <label for="current_Address">Delivery to current address  </label><br>
+                        <input type="radio" id="new_Address" name="Delivery_Method" value="new_Address" onclick="displayShow()">
+                        <label for="current_Address" >Delivery to new address  </label><br>
+
+                        <textarea id = "pid" style="visibility: hidden" name="address" cols="50" rows="2" placeholder="address" ></textarea> <br>
+
+
+
+
                         <br><br>
                         <p class="PaymentH"> Credit Card Detais</p><br>
                         <label for="Card_Number"> Card Number</label>
@@ -51,8 +59,8 @@
                         <br>
                         <label for="CVV"> CVV </label> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
                         <input id="CVV" name="CVV" placeholder="000"> <br><br>
-                        <p> Total Price: --- </p><br>
-                        <input  type="submit" value="Submit">
+                        <p> Total Price: {{ total_price}} </p><br>
+                        <input href="/confirmationOrder" type="submit" value="Submit">
                     </form>
             </div> <br>
     </main>
@@ -62,4 +70,5 @@
 
 {% block page_body_js %}
     <script src="{{ url_for('payment.static', filename='js/payment.js') }}"></script>
+    <script src="{{ url_for('cart.static', filename='js/cart.js') }}"></script>
 {% endblock %}

@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Edit product' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('editShop.static', filename='css/editShop.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+         <main id="search_eara">
+         <br>
+         {% if  message%}
+            <p id = 'message'> {{ message }}</p>
+         {% endif %}
+        <br>
+         <a href="/new_product">
+            <button class=border> Add a new product</button>
+         </a>
+
+
+
+        <input class="search-box" type="text" id="search" onkeyup="myFunction()" placeholder="Search for names..">
+
+         <style>
+         #search{
+                background-image: url("{{ url_for('shop.static',filename='media/searchicon.jpg') }}") ;
+            }
+        </style>
+
+        <div class = filter>
+            &#160; &#160; &#160; &#160;<b> Shop By Price: </b>
+            <button class="btn active" onclick="filterSelection('all')"> The whole store </button>
+            <button class="btn" onclick="filterSelection('low')">under 50₪</button>
+            <button class="btn" onclick="filterSelection('mid')"> 50₪-100₪</button>
+            <button class="btn" onclick="filterSelection('high')"> over 100₪</button>
+        </div>
+        <div class = filter>
+            &#160; &#160; &#160; &#160;<b> On Sale:</b> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+            <button class="btn" onclick="filterSelection('sale')">sale</button>
+        </div>
+        <div class = filter>
+            &#160; &#160; &#160; &#160; <b> Colour: </b> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+            <button id = "green" class="btn" onclick="filterSelection('green')">green</button>
+            <button id = "yellow" class="btn" onclick="filterSelection('yellow')">yellow</button>
+            <button id = "white" class="btn" onclick="filterSelection('white')">white</button>
+            <button id = "blue" class="btn" onclick="filterSelection('blue')">blue</button>
+            <button id = "black" class="btn" onclick="filterSelection('black')">black</button>
+        </div>
+
+
+        <ul id="Product_list">
+            {%  for product in products %}
+            <li>
+                <div class="card filterDiv {{ product.price_level }} {% if product.sale == 'sale'%}
+                                                                        'sale'
+                                                                     {%endif%}
+                                            {{ product.sale }} {{ product.color }}" v-for="post in filteredList">
+                        <img class=shopPicture src="{{ url_for('shop.static', filename= product.link) }}" alt="">
+                    <p><b>{{ product.name }}</b></p>
+                    <p> price:
+                        {%if product.sale %}
+                            <del>{{ product.price }}₪</del>
+                            <ins>{{ product.sale_price }}</ins></p>
+                        {% else %}
+                            {{ product.price }}₪
+                        {% endif %}
+                    <form action="/editShop_delete" method="POST" name="deleteProd" >
+                        <input type="hidden" name="product" value="{{ product.product_id }}">
+                        <button id="deleteButton" type="submit" onclick="">
+                            <img id="deletePhoto" src="{{ url_for('editShop.static', filename= "media/garbage.jpeg") }}">
+                            Delete Product
+                        </button>
+                    </form>
+                </div>
+            </li>
+            {% endfor %}
+
+        </ul>
+     </main>
+{% endblock %}
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('editShop.static', filename='js/editShop.js') }}"></script>
+{% endblock %}

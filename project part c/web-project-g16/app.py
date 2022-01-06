@@ -68,3 +68,14 @@ app.register_blueprint(LogOut)
 ## update details
 from pages.UpdateDetails.UpdateDetails import UpdateDetails
 app.register_blueprint(UpdateDetails)
+
+## editShop details
+from pages.editShop.editShop import editShop
+app.register_blueprint(editShop)
+
+## new_product details
+from pages.new_product.new_product import new_product
+app.register_blueprint(new_product)
+
+from pages.confirmationOrder.confirmationOrder import confirmationOrder
+app.register_blueprint(confirmationOrder)

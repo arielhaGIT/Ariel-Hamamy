@@ -8,6 +8,12 @@
 
 {% block page_body_main_content %}
      <main id="search_eara">
+        <br>
+         {% if session.user_data and session.user_data['username'] == 'Shop Admin' %}
+            <a href="/editShop">
+            <button class=border> edit my shop products</button></a>
+        {% endif %}
+
         <style>
             main{
                 background: url("{{ url_for('shop.static',filename='media/white.jpg') }}") ;
@@ -42,133 +48,44 @@
             <button id = "black" class="btn" onclick="filterSelection('black')">black</button>
         </div>
 
+
         <ul id="Product_list">
+            {%  for product in products %}
             <li>
-                <div class="card filterDiv high sale black" v-for="post in filteredList">
-                    <img class=shopPicture src="{{ url_for('shop.static', filename='media/store1.png') }}" alt="">
-                    <p><b>poike</b></p>
-                    <p> price: <del>180₪</del> <ins>140₪</ins></p>
-                    <a href="#">add to cart</a>
+                <div class="card filterDiv {{ product.price_level }} {% if product.sale == 'sale'%}
+                                                                        'sale'
+                                                                     {%endif%}
+                                            {{ product.sale }} {{ product.color }}" v-for="post in filteredList">
+                    <img class=shopPicture src="{{ url_for('shop.static', filename= product.link) }}" alt="">
+                    <p><b>{{ product.name }}</b></p>
+                    <p> price:
+                        {%if product.sale %}
+                            <del>{{ product.price }}₪</del>
+                            <ins>{{ product.sale_price }}</ins></p>
+                        {% else %}
+                            {{ product.price }}₪
+                        {% endif %}
+                    <form id="addtocart" method="POST" action="/add_to_cart" >
+                        <input type="hidden" name="productId" value="{{ product.product_id }}">
+                        <input type="hidden" name="productPrice" value="{{ product.price }}">
+                        <input type="hidden" name="productSale" value="{{ product.sale_price }}">
+                        <button id="addtocart" type="submit">add to cart</button>
+                    </form>
                 </div>
             </li>
-
-            <li>
-                <div class="card filterDiv mid sale green" v-for="post in filteredList">
-                    <img class=shopPicture src="{{ url_for('shop.static', filename='media/store2.png') }}" alt="">
-                    <p><b>box</b></p>
-                    <p> price: <del>80₪</del> <ins>55₪</ins></p>
-                    <a href="#">add to cart</a>
-                </div>
-            </li>
-            <li>
-                <div class="card filterDiv high green" v-for="post in filteredList">
-                    <img class=shopPicture src="{{ url_for('shop.static', filename='media/store3.png') }}" alt="">
-                    <p><b>avocado</b></p>
-                     <p>price: 190₪</p>
-                    <a href="#">add to cart</a>
-                </div>
-            </li>
-            <li>
-                <div class="card filterDiv low yellow" v-for="post in filteredList">
-                    <img class=shopPicture src="{{ url_for('shop.static', filename='media/store4.png') }}" alt="">
-                    <p><b>pineapple</b></p>
-                    <p> price: 40₪</p>
-                    <a href="#">add to cart</a>
-                </div>
-            </li>
-
-            <li>
-                <div class="card filterDiv low sale black" v-for="post in filteredList">
-                    <img class=shopPicture src="{{ url_for('shop.static', filename='media/photo7.jpeg') }}" alt="">
-                    <p><b>regular</b></p>
-                    <p> price: <del>40₪</del> <ins>25₪</ins></p>
-                    <a href="#">add to cart</a>
-                </div>
-            </li>
-            <li>
-                <div class="card filterDiv low yellow" v-for="post in filteredList">
-                    <img class=shopPicture src="{{ url_for('shop.static', filename='media/base3.png') }}" alt="">
-                    <p><b>pikachu</b></p>
-                    <p> price: 45₪</p>
-                    <a href="#">add to cart</a>
-                </div>
-            </li>
-            <li>
-                <div class="card filterDiv mid sale blue" v-for="post in filteredList">
-                    <img class=shopPicture src="{{ url_for('shop.static', filename='media/photo3.jpeg') }}" alt="">
-                    <p><b>blue pokemon</b></p>
-                    <p> price: <del>90₪</del> <ins>60₪</ins></p>
-                    <a href="#">add to cart</a>
-                </div>
-            </li>
-            <li>
-                <div class="card filterDiv mid white" v-for="post in filteredList">
-                    <img class=shopPicture src="{{ url_for('shop.static', filename='media/photo4.jpeg') }}" alt="">
-                    <p><b>chinese food</b></p>
-                    <p> price: 80₪</p>
-                    <a href="#">add to cart</a>
-                </div>
-            </li>
-            <li>
-                <div class="card filterDiv  yellow low" v-for="post in filteredList">
-                    <img class=shopPicture src="{{ url_for('shop.static', filename='media/base2.png') }}" alt="">
-                    <p><b>cheese</b></p>
-                    <p> price: 20₪</p>
-                    <a href="#">add to cart</a>
-                </div>
-            </li>
-            <li>
-                <div class="card filterDiv mid" v-for="post in filteredList">
-                    <img class=shopPicture src="{{ url_for('shop.static', filename='media/photo6.jpeg') }}" alt="">
-                    <p><b>wood style</b></p>
-                    <p> price: 70₪</p>
-                    <a href="#">add to cart</a>
-                </div>
-            </li>
-            <li>
-                <div class="card filterDiv low blue" v-for="post in filteredList">
-                    <img class=shopPicture src="{{ url_for('shop.static', filename='media/base4.png') }}" alt="">
-                    <p><b>Sponge bob </b></p>
-                    <p> price: 45₪</p>
-                    <a href="#">add to cart</a>
-                </div>
-            </li>
-            <li>
-                <div class="card filterDiv low white" v-for="post in filteredList">
-                    <img class=shopPicture src="{{ url_for('shop.static', filename='media/Item1.png') }}" alt="">
-                    <p><b>snail</b></p>
-                    <p> price: 45₪</p>
-                    <a href="#">add to cart</a>
-                </div>
-            </li>
-            <li>
-                <div class="card filterDiv high sale white" v-for="post in filteredList">
-                    <img class=shopPicture src="{{ url_for('shop.static', filename='media/Item2.png') }}" alt="">
-                    <p><b>alpaca</b></p>
-                    <p> price: <del>240₪</del> <ins>160₪</ins></p>
-                    <a href="#">add to cart</a>
-                </div>
-            </li>
-
-            <li>
-                <div class="card filterDiv high black white" v-for="post in filteredList">
-                    <img class=shopPicture src="{{ url_for('shop.static', filename='media/photo1.jpeg') }}" alt="">
-                    <p><b>yin and yang</b></p>
-                    <p> price: 130₪</p>
-                    <a href="#">add to cart</a>
-                </div>
-            </li>
-
-            <li>
-                <div class="card filterDiv sale black white yellow low" v-for="post in filteredList">
-                    <img class=shopPicture src="{{ url_for('shop.static', filename='media/store5.png') }}" alt="">
-                    <p><b>cat</b></p>
-                    <p> price: <del>130</del> <ins>30</ins></p>
-                    <a href="#">add to cart</a>
-                </div>
-            </li>
+            {% endfor %}
 
         </ul>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                var scrollpos = localStorage.getItem('scrollpos');
+                if (scrollpos) window.scrollTo(0, scrollpos);
+                });
+
+            window.onbeforeunload = function(e) {
+                localStorage.setItem('scrollpos', window.scrollY);
+            };
+        </script>
      </main>
 {% endblock %}
 
@@ -176,4 +93,3 @@
 {% block page_body_js %}
     <script src="{{ url_for('shop.static', filename='js/shop.js') }}"></script>
 {% endblock %}
-

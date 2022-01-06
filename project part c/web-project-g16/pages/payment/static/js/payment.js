@@ -28,9 +28,13 @@ function isallNumric(str){
     }
     return true;
 }
+function displayHide() {
+            document.getElementById("pid").style.visibility = "hidden";
+         }
 
 
-
-
+function displayShow() {
+            document.getElementById("pid").style.visibility = "visible";
+         }
 
 

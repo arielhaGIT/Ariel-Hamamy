@@ -1,0 +1,231 @@
+/*Edit page */
+#deletePhoto{
+    height:13%;
+    width: 13%;
+
+}
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!  search  !!!!!!!!!!!!!!!!!!!*/
+#search_eara {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    /*background-image:url("{{ url_for('shop.static', filename='media/white.jpg') }}");*/
+    /*background: url("/shop/static/media/white.jpg") no-repeat 0px 0px;*/
+    /*background-image:url("shop/static/media/white.jpg");*/
+    /*background: src="{{ url_for('shop.static',filename='media/white.jpg') }}*/
+
+  }
+
+#deleteButton{
+
+    width: 100%;
+    border: 1px solid rgb(5, 5, 5); /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #e0f3e2; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+}
+
+#deleteButton:hover{
+    cursor: pointer;
+}
+
+#deleteButton:focus{
+    background-color: rgb(29, 218, 83); /* Grey background color */
+}
+
+.filter{
+  align-self: left;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#search {
+    align-self: left;
+    position: relative;
+    top: 8px;
+    margin-left: 0%;
+    background-image:  url("{{ url_for('shop.static', filename='media/searchicon.jpg') }}") ; /* Add a search icon to input */
+    background-position: 10px 12px; /*Position the search icon */
+    background-size: 1cm;
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 50%;  /*Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 20px;  /* Add some space below the input */
+    font-family: cursive;
+    border-radius: 25px;
+    border: 2px solid #92c498;
+  }
+
+
+input {
+        padding: 4px 12px;
+        color: rgba(0,0,0,.70);
+        border: 1px solid rgba(0,0,0,.12);
+        transition: .15s all ease-in-out;
+        background: white;
+
+    }
+
+    /*!!!!!!!!!!!!!!!!!!!!!!  product card  !!!!!!!!!!!!!!!!!!!*/
+.card {
+      /* transition: .15s all ease-in-out; */
+      text-align: center;
+      justify-content: center;
+
+
+         /* line display */
+        display: flex;
+        display: inline-block;
+        position: relative;
+        float: left;
+
+        width: 20%;
+        /* height: 20%;  */
+
+        border: black solid 3px;
+        margin: 5%;
+        background-color: #c8e0d7;
+        flex-shrink: 0;
+        margin-left: 6%;
+
+}
+
+.card img{
+    width: 100%;
+    height: 10rem;
+
+    justify-content: center;
+
+}
+
+.card a{
+   margin-top: 90%;
+   justify-content: center;
+}
+
+
+.card:hover {
+        transform: scale(1.05);
+
+}
+
+#Product_list{
+   /* display: grid;
+   grid-template-columns: repeat(auto-fill,20rem); */
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    /* justify-content: space-between; */
+    justify-content: center;
+
+
+}
+#message {
+    color: black;
+    text-align: center;
+     font-weight: bold;
+}
+
+  #Product_list li a {
+    border: 1px solid rgb(5, 5, 5); /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #e0f3e2; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+  }
+
+  #Product_list li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+  }
+
+     /*!!!!!!!!!!!!!!!!!!!!!!  filter button  !!!!!!!!!!!!!!!!!!!*/
+
+     #green{
+        background-color: rgba(178, 230, 210, 0.815);
+
+     }
+     #yellow{
+        background: rgb(229, 229, 132);
+    }
+    #blue{
+        background: rgb(111, 143, 247);
+    }
+    #black{
+        background: black;
+        color: white;
+    }
+    #white{
+        background: white;
+    }
+
+
+
+
+      /* Style the buttons */
+      .btn {
+        font-family: cursive;
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        border-radius: 25px;
+        border: 2px solid #92c498;
+      }
+
+      /* Add a light grey background on mouse-over */
+      .btn:hover {
+        background-color: #ddd;
+      }
+
+      /* Add a dark background to the active button */
+      button.btn:focus {
+        background-color: #666;
+        color: white;
+      }
+
+      /* The "show" class is added to the filtered elements */
+    .hide {
+        /* display: block; */
+        display: none;
+    }
+
+/* ----------------mobile----------------- */
+
+@media only screen and (max-width:600px) {
+
+    /* --------------------main------------------- */
+    .card img {
+        height: 5rem;
+    }
+
+    #Product_list li a {
+        font-size: 12px; /* Increase the font-size */
+    }
+
+    #Product_list li p {
+        font-size: 10px; /* Increase the font-size */
+    }
+
+    .login_h {
+        position: absolute;
+        top: calc(35%);
+        left: calc(20%);
+        height: 150px;
+        width: 350px;
+
+    }
+}
+

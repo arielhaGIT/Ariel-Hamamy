@@ -13,16 +13,17 @@
             </div>
             <div class="details">
                 <ul><b> This is me</b>
-                    <li>User Name: Nachum Takum</li>
-                    <li>Email: nachumtak@gmail.com</li>
-                    <li>Date of birth: 10.10.1910</li>
+                    <li>User Name: {{ session.user_data['username'] }}</li>
+                    <li id="userEmail">Email: {{ email }}</li>
+                    <li id="dateOfBirth">Date of birth: {{ birthdate }}</li>
+
                     <li>
-                         <a href='/UpdateDetails'>
-                            <button class = "border" onclick="filterupdate('phone')"> Edit phone </button>
+                         <a href='/UpdateDetails?p1=email'>
+                            <button class = "border"> Edit email </button>
                          </a>
                     </li>
                     <li>
-                         <a href='/UpdateDetails'>
+                         <a href='/UpdateDetails?p1=password'>
                             <button class = "border"> Edit password </button>
                          </a>
                     </li> <br> <br><br>
@@ -36,15 +37,23 @@
             </div>
                  <div class="address">
                     <ul><b> Address details</b>
-                        <li>Address: 825 Hicksville Rd, Queens, NY 11691</li>
-                        <li>Telephone: (234) 235-5678 </li>
-                         <li> <button class = "border"> Edit | Change Address </button> </li>
+                        <li>Address: {{ address }}</li>
+                        <li>Telephone: {{ phone }} </li>
+                         <li>
+                             <a href='/UpdateDetails?p1=address'>
+                                <button class = "border"> Edit address </button>
+                             </a>
+                        </li>
+                         <li>
+                         <a href='/UpdateDetails?p1=phone'>
+                            <button class = "border" onclick="filterupdate('phone')"> Edit phone </button>
+                         </a>
+                    </li>
                     </ul>
                  </div>
                  <div class="orders">
                      <ul><b> my last orders</b>
                          <div class="ordersExample">
-
                              <table class="styled-table">
                                 <thead>
                                     <tr>
@@ -56,28 +65,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                {%  for order in orders %}
                                     <tr>
-                                        <td>1</td>
-                                        <td>29.11.2021</td>
-                                        <td>825 Hicksville Rd, Queens, NY 11691</td>
-                                        <td>$112</td>
-                                        <td>Shipped</td>
+                                        <td>{{ order.cart_id }}</td>
+                                        <td>{{ order.time}}</td>
+                                        <td>{{ order.address}}</td>
+                                        <td>{{ order.total_cost}}</td>
+                                        <td>{{ order.status}}</td>
                                     </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>28.8.2021</td>
-                                        <td>825 Hicksville Rd, Queens, NY 11691</td>
-                                        <td>$42</td>
-                                        <td>Refunded</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>10.8.2021</td>
-                                        <td>825 Hicksville Rd, Queens, NY 11691</td>
-                                        <td>$56</td>
-                                        <td>Shipped</td>
-                                    </tr>
-                                    <!-- ... -->
+                                {% endfor %}
+
                                 </tbody>
                             </table>
                          </div>

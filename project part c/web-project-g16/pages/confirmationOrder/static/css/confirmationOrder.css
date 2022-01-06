@@ -1,0 +1,191 @@
+
+
+/* ----------------Main----------------- */
+
+.pictureGallery{
+  width: 50%; height: 70% ;
+  border: 1.5px solid black;
+  margin: 0.25%;
+}
+
+.pictureGallery:hover{
+  cursor: pointer;
+  border: yellowgreen;
+}
+
+#Main{
+  display: grid;
+  grid-template-areas:
+  'bagsPhoto Title '
+  ;
+  grid-template-columns: 30% 70%;
+  grid-area: Main;
+  text-align: center;
+  height: 70vh;
+
+}
+
+#Title{
+  grid-area: Title;
+  text-align: left;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+#bagsPhoto{
+  grid-area: bagsPhoto;
+  margin-top: 20%;
+}
+
+
+/*---------------------events -----------------------------> */
+
+.Events{
+  text-align: center;
+  grid-area: ItemTable;
+  border: 1px solid rgba(17, 17, 17, 0.6);
+  border-radius: 2px;
+color: rgb(0, 0, 0);
+  background-color: rgb(221, 221, 221);
+/* padding: 10px; */
+z-index: 2;
+  opacity: 0.8;
+font-size: 16px;
+font-weight: 400;
+margin: 10px;
+  vertical-align: middle;
+  height: 35vh;
+
+}
+
+.pictureEvents{
+  height: 32vh;
+  width: 80%;
+  border: 1.5px solid rgb(22, 5, 5);
+  text-align: center;
+  background-color: rgb(221, 221, 221);
+  opacity: 0.8;
+  position: relative;
+  left: -15%;
+}
+
+.pictureEvents b{
+position: relative;
+top: 10%;
+text-decoration: underline;
+}
+
+.pictureEvents p{
+position: relative;
+top: 40%;
+}
+/* Caption text */
+
+
+
+/* Slideshow container */
+.slideshow-container {
+max-width: 50%;
+position: relative;
+margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+display: none;
+position: relative;
+left: 25%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -22px;
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+
+}
+
+/* Position the "next button" to the right */
+.next {
+right: -10%;
+}
+
+.prev{
+  left: -10%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+
+}
+
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+
+@keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+
+
+@media only screen and (max-width:600px) {
+  .pictureEvents{
+      width: 120%;
+      height: 45vh;
+      left: -35%;
+
+    }
+
+  .next {
+    right: -30%;
+    }
+
+    .prev{
+      left: -30%;
+    }
+}
+
+
+
+
+
+

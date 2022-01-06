@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template,session,request
-from utilities.db.db_users import DBusers
+from utilities.db.db_users import dbusers
+from utilities.db.db_cart import dbcart
 
 
 # catalog blueprint definition
@@ -15,11 +16,21 @@ def index():
         username = request.form['username']
         password = request.form['password']
 
-        if DBusers.check_user_signIn(username, password):
+        if dbusers.check_user_signIn(username, password):
             session['logged_in'] = True
+            details = dbusers.get_all_details(username)
+            dbcart.insert(username)
+            cartid = dbcart.get_last_cart_id(username)
             session['user_data'] = {
                 'username': username,
-                'password': password
+                'password': password,
+                'phone': details[0].phone,
+                'address': details[0].address,
+                'birthdate': details[0].birthdate,
+                'email': details[0].email,
+                'firstname': details[0].firstName,
+                'lastname': details[0].lastName,
+                'cart_id': cartid
             }
             session['WrongDetails'] = False
             session.pop('WrongDetails')

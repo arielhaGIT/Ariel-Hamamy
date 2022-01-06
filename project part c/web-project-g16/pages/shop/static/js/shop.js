@@ -23,6 +23,7 @@ function myFunction() {
 //-----------------button filter function------------
 
 function filterSelection(c) {
+  console.log("hiiii")
   var x, i;
   x = document.getElementsByClassName("filterDiv");
   if (c == "all") c = "";
@@ -56,4 +57,19 @@ function w3RemoveClass(element, name) {
     }
   }
   element.className = arr1.join(" ");
+}
+
+
+function add_product_to_session(ProductId, price, name, link ) {
+  sessionStorage.setItem('a','1')
+  console.log(sessionStorage.getItem('a'))
+  // sessionStorage.clear();
+  // sessionStorage.setItem(ProductId, {'quantity':1, 'price':price, 'name':name, 'link':link});
+  // console.log(sessionStorage);
+  // $(document).ready(function(){ $('.button').click(function(){var href = $(this).val();$.session.set("yoursessioname", "storevalue");}) });
+  // alert($.session.get("yoursessioname"));
+  //
+  // console.log(ProductId);
+  // cart[ProductId] = 1;
+  // console.log(cart)
 }

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'confirmationOrder' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('confirmationOrder.static', filename='css/confirmationOrder.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+    <main id="Main">
+    <br>
+        <div id="Title">
+            <h1> Thank you for your order!  </h1> <br> <br>
+            <h2> The payment for your order has been confirmed </h2>
+            <h2> Your order number is: {{ cart_id }} </h2> <br> <br>
+            <h3> We are working on your order</h3>
+            <h3> If you have any questions, please call us: +972-54333333</h3><br>
+            <h3> Sincerely, succulents3D</h3>
+
+        </div>
+        <div id="bagsPhoto">
+            <img class=pictureGallery src="{{ url_for('confirmationOrder.static', filename='media/bags.png') }}" alt="" >
+        </div>
+    </main>
+{% endblock %}
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('confirmationOrder.static', filename='js/confirmationOrder.js') }}"></script>
+{% endblock %}

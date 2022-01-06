@@ -49,13 +49,13 @@
                     <div class="Title">
                     describe your issue below:
                     </div> <br>
-                    <form action="/action_page.php">
-                        <label class="GreenInfo" for="id1">First name:</label>
-                        <input type="text" id="id1" minlength="4" name="fname"><br><br>
-                        <label class="GreenInfo" for="id2">Last name:</label>
-                        <input type="text" id="id2" minlength="4" name="lname"><br><br>
+                    <form method="POST" action="/returns" name="returns">
+                        <label class="GreenInfo" for="id1">Subject:</label>
+                        <input type="text" id="id1" required minlength="4" name="subject"><br><br>
+                        <label class="GreenInfo" for="id2">Order Number:</label>
+                        <input type="text" id="id2" required minlength="1" name="orderNum"><br><br>
                         <label class="GreenInfo" >your problem:</label> <br>
-                        <textarea name="problem" id = "id3" required minlength="20" cols="40" rows="5" ></textarea> <br>
+                        <textarea name="problem" id = "id3" required minlength="20" cols="40" rows="5" name = "problem"></textarea> <br>
                         <label class="GreenInfo">image:</label>
                         <input type="file" id="file" name="file"><br><br>
                         <input onclick="validationReturns()" type="submit" value="Submit">

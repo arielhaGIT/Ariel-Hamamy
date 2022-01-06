@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'New product' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('new_product.static', filename='css/new_product.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+    <main id="Main" class="login_center">
+        {% if  message%}
+            <p id = 'message'> {{ message }}</p>
+         {% endif %}
+
+         <style>
+            main{
+                background: url("{{ url_for('SignUp.static',filename='media/photo2.jpeg') }}") ;
+            }
+        </style>
+        <div class="login_img"></div>
+             <div class="login_text">
+                <div class="login_h">
+                    <div>SUCCULENTS<span>3D</span></div>
+                </div>
+
+                <div class="login">
+                    <form action="/new_product_insert" method="POST" name="new_product" >
+                        <br><br><br>
+                        <input type="text" placeholder="Product name" id="id1" name="name" required minlength="2" ><br>
+                        <input type="number" placeholder="Price" id="id2" name="price" required minlength="1" min="1"><br>
+                        <input type="number" placeholder="Sale price" name="sale_price" min="1"><br>
+
+
+                        <label for="color">Choose a color:</label>
+                        <select id="color" name="color">
+                            <option value="yellow">Yellow</option>
+                            <option value="blue">Blue</option>
+                            <option value="black">Black</option>
+                            <option value="white">White</option>
+                            <option value="green">Green</option>
+                         </select> <br>
+
+                        <label for="photo">Choose a photo:</label>
+                        <select id="photo" name="photo">
+                            <option value="media/honey jar.png">honey jar</option>
+                            <option value="media/poike.png">poike</option>
+                            <option value="media/box.png">box</option>
+                            <option value="media/avocado.png">avocado</option>
+                            <option value="media/pinapple.png">pinapple</option>
+                            <option value="media/regular.jpeg">regular</option>
+                            <option value="media/pickachu.png">pickachu</option>
+                            <option value="media/blue pokemon.jpeg">blue pokemon</option>
+                            <option value="'media/chinese food.jpeg">chinese food</option>
+                            <option value="media/cheese.png">cheese</option>
+                            <option value="media/wood style.jpeg">wood style</option>
+                            <option value="media/Sponge bob.png">Sponge bob</option>
+                            <option value="media/snail.png">snail</option>
+                            <option value="media/alpaca.png">alpaca</option>
+                            <option value="yin&media/yin&yang.jpeg">yin&yang</option>
+                            <option value="media/cat.png">cat</option>
+                         </select> <br>
+
+                        <input type="Submit" value="Enter" onclick="validation()">
+
+                    </form>
+                </div>
+
+            </div>
+  </main>
+{% endblock %}
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('new_product.static', filename='js/new_product.js') }}"></script>
+{% endblock %}

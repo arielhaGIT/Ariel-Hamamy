@@ -3,6 +3,8 @@ from flask import render_template
 from flask import request
 from flask import session
 from interact_with_DB import interact_db
+import requests
+import random
 
 app = Flask(__name__)
 app.secret_key = '123'
@@ -90,6 +92,30 @@ def delete_user_func():
     query = "delete from users where id='%s';" % user_id
     interact_db(query=query, query_type='commit')
     return redirect('/users')
+
+@app.route('/req_fronthand')
+def req_fronthand_func():
+    return render_template('req_fronthand.html')
+
+def get_pokemons(num):
+    pokemons = []
+    for i in range(num):
+        random_num = random.randint(1, 100)
+        res = requests.get(f'https://pokeapi.co/api/v2/pokemon/{random_num}')
+        res = res.json()
+        pokemons.append(res)
+    return pokemons
+
+@app.route('/req_backhand')
+def req_backhand_func():
+    num = 3;
+    if "number" in request.args:
+        num = int(request.args["number"])
+    pokemons = get_pokemons(num)
+    return render_template('req_backhand.html', pokemons=pokemons)
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
