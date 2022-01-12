@@ -1,7 +1,7 @@
 from flask import Flask, redirect, url_for
 from flask import render_template
 from flask import request
-from flask import session
+from flask import session, jsonify
 from interact_with_DB import interact_db
 import json
 import requests
@@ -21,11 +21,23 @@ users = {'user1': { 'Name': 'Yossi', 'Last name': 'cohen', 'Email': 'yossi@gmail
 def home_func():  # put application's code here
     return render_template('cv.html', name='ariel')
 
+@app.route('/assignment8', methods=['GET', 'POST'])
+def about_func():  # put application's code here
+    name = 'Ariel'
+    second_name = 'Hamamy'
+    uni = 'BGU'
+    return render_template('assignment8.html',
+                           profile={'name': 'Ariel', 'second_name': 'Hamamy'},
+                           name=name,
+                           university=uni,
+                           second_name=second_name,
+                           degreas=['BSc', 'MSc', 'GrandMaster'],
+                           hobies=('art', 'music', 'sql'))
+
 @app.route('/assignment9', methods=['GET', 'POST'])
 def login_func():  # put application's code here
-    print(users.values())
     if request.method == 'GET':
-        if session['username']:
+        if 'username' in session:
             if 'search_user' in request.args:
                 search_user = request.args['search_user']
                 return render_template('assignment9.html', username=session['username']
@@ -50,20 +62,11 @@ def logout_func():  # put application's code here
     session['username'] = ''
     return render_template('CV.html')
 
-@app.route('/assignment8', methods=['GET', 'POST'])
-def about_func():  # put application's code here
-    name = 'Ariel'
-    second_name = 'Hamamy'
-    uni = 'BGU'
-    return render_template('assignment8.html',
-                           profile={'name': 'Ariel', 'second_name': 'Hamamy'},
-                           name=name,
-                           university=uni,
-                           second_name=second_name,
-                           degreas=['BSc', 'MSc', 'GrandMaster'],
-                           hobies=('art', 'music', 'sql'))
 
-
+###### Pages
+## assignment10
+from pages.assignment10.assignment10 import assignment10
+app.register_blueprint(assignment10)
 
 @app.route('/assignment11')
 def assignment11_func():  # put application's code here
@@ -100,10 +103,25 @@ def outer_source_func():
     else:
         return render_template('assignment11.html')
 
-###### Pages
-## assignment10
-from pages.assignment10.assignment10 import assignment10
-app.register_blueprint(assignment10)
+@app.route('/assignment12/restapi_users', defaults={'id': 1})
+@app.route('/assignment12/restapi_users/<int:id>')
+def get_users_func(id):
+    query = 'select * from users where id=%s;' % id
+    users = interact_db(query=query, query_type='fetch')
+    if len(users) == 0:
+        return_dict = {
+            'status': 'failed',
+            'message': 'user not found'
+        }
+    else:
+        return_dict = {
+            'status': 'success',
+            f'id': users[0].id,
+            'name': users[0].name,
+            'email': users[0].email,
+        }
+    return jsonify(return_dict)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,6 +1,6 @@
 from flask import Flask, redirect, url_for
 from flask import render_template
-from flask import request
+from flask import request, jsonify
 from flask import session
 from interact_with_DB import interact_db
 import requests
@@ -58,6 +58,26 @@ def about_func():  # put application's code here
                            degreas=['BSc', 'MSc', 'GrandMaster'],
                            hobies=('art', 'music', 'sql'))
 
+
+@app.route('/db_users', defaults={'user_id': 1})
+@app.route('/db_users/<int:user_id>')
+def get_users_func(user_id):
+    query = 'select * from users where user_id=%s;' % user_id
+    users = interact_db(query=query, query_type='fetch')
+    if len(users) == 0:
+        return_dict = {
+            'status': 'failed',
+            'message': 'user not found'
+        }
+    else:
+        return_dict = {
+            'status': 'success',
+            f'id': users[0].user_id,
+            'name': users[0].name,
+            'email': users[0].email,
+        }
+    return jsonify(return_dict)
+
 @app.route('/users')
 def users_func():
     query = 'select * from users;'
@@ -113,7 +133,6 @@ def req_backhand_func():
         num = int(request.args["number"])
     pokemons = get_pokemons(num)
     return render_template('req_backhand.html', pokemons=pokemons)
-
 
 
 

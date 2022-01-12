@@ -16,7 +16,11 @@
                     <li>User Name: {{ session.user_data['username'] }}</li>
                     <li id="userEmail">Email: {{ email }}</li>
                     <li id="dateOfBirth">Date of birth: {{ birthdate }}</li>
-
+                    <li>
+                         <a href='/UpdateDetails?p1=phone'>
+                            <button class = "border" onclick="filterupdate('phone')"> Edit phone </button>
+                         </a>
+                    </li>
                     <li>
                          <a href='/UpdateDetails?p1=email'>
                             <button class = "border"> Edit email </button>
@@ -44,16 +48,12 @@
                                 <button class = "border"> Edit address </button>
                              </a>
                         </li>
-                         <li>
-                         <a href='/UpdateDetails?p1=phone'>
-                            <button class = "border" onclick="filterupdate('phone')"> Edit phone </button>
-                         </a>
-                    </li>
                     </ul>
                  </div>
                  <div class="orders">
                      <ul><b> my last orders</b>
                          <div class="ordersExample">
+
                              <table class="styled-table">
                                 <thead>
                                     <tr>
@@ -65,16 +65,28 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                {%  for order in orders %}
                                     <tr>
-                                        <td>{{ order.cart_id }}</td>
-                                        <td>{{ order.time}}</td>
-                                        <td>{{ order.address}}</td>
-                                        <td>{{ order.total_cost}}</td>
-                                        <td>{{ order.status}}</td>
+                                        <td>1</td>
+                                        <td>29.11.2021</td>
+                                        <td>825 Hicksville Rd, Queens, NY 11691</td>
+                                        <td>$112</td>
+                                        <td>Shipped</td>
                                     </tr>
-                                {% endfor %}
-
+                                    <tr>
+                                        <td>2</td>
+                                        <td>28.8.2021</td>
+                                        <td>825 Hicksville Rd, Queens, NY 11691</td>
+                                        <td>$42</td>
+                                        <td>Refunded</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>10.8.2021</td>
+                                        <td>825 Hicksville Rd, Queens, NY 11691</td>
+                                        <td>$56</td>
+                                        <td>Shipped</td>
+                                    </tr>
+                                    <!-- ... -->
                                 </tbody>
                             </table>
                          </div>
